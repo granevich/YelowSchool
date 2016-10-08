@@ -472,10 +472,295 @@ th
 
 section.header
 {
-    width: 100%;
     height: 100vh;
-    padding: 10%; 
+    min-height: 700px;
+    padding: 5% 10%; 
 
-    background: url('../img/header_BG.jpg') no-repeat;
+    background: transparent;
     background-size: 100% 100%;
+}
+@media screen and (max-width: 850px)
+{
+    section.header
+    {
+        padding: 5%;
+    }
+}
+section.header .logo-yellow-school
+{
+    position: relative;
+
+    display: inline-block;
+    float: left;
+
+    width: 270px;
+    height: 85px;
+
+    text-align: center;
+
+    background: #fcc51b;
+}
+@media screen and (max-width: 850px)
+{
+    section.header .logo-yellow-school
+    {
+        float: right; 
+
+        width: 81%;
+    }
+}
+section.header .logo-yellow-school :first-child
+{
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 34px;
+    line-height: 1.1; 
+
+    color: #282828;
+}
+section.header .logo-yellow-school :nth-child(2)
+{
+    font-family: 'Times New Roman', sans-serif;
+    font-size: 17.5px;
+    line-height: 1.1; 
+
+    color: #282828;
+}
+section.header .logo-yellow-school .logo_bus
+{
+    position: absolute;
+    top: 0;
+    right: -100px;
+}
+@media screen and (max-width: 850px)
+{
+    section.header .logo-yellow-school .logo_bus
+    {
+        left: -80px;
+    }
+}
+section.header .course-info
+{
+    display: inline-block;
+    float: right;
+
+    width: 305px;
+    height: 85px;
+    margin-bottom: 15px;
+    padding: 5px 30px;
+
+    text-align: right; 
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: rgba(202, 202, 202, .7);
+}
+@media screen and (max-width: 850px)
+{
+    section.header .course-info
+    {
+        float: left;
+
+        width: 100%;
+        margin-top: 15px;
+
+        text-align: left;
+    }
+}
+section.header .course-info :first-child
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 21.667px;
+    font-weight: bold; 
+    line-height: 1.2;
+
+    color: #282828;
+}
+section.header .course-info :last-child
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14.5px;
+    font-weight: bold; 
+    line-height: 1.2;
+
+    color: #282828;
+}
+section.header .feedback
+{
+    display: inline-block;
+    float: left;
+
+    width: 260px;
+    height: 290px;
+    padding-top: 50px;
+    padding-left: 30px; 
+
+    background: rgba(252, 197, 27, .7);
+}
+@media screen and (max-width: 850px)
+{
+    section.header .feedback
+    {
+        width: 100%;
+        padding: 10% 5%;
+    }
+}
+section.header .feedback input
+{
+    height: 45px;
+    margin-bottom: 26px; 
+
+    text-align: center;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    outline: none;
+}
+@media screen and (max-width: 850px)
+{
+    section.header .feedback input
+    {
+        width: 100%;
+    }
+}
+section.header .feedback button
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    line-height: 1.2; 
+
+    width: 87%;
+    height: 50px;
+
+    color: #ebebeb;
+    border: 1px solid #ed1c24;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    outline: none;
+    background: #ed1c24;
+}
+@media screen and (max-width: 850px)
+{
+    section.header .feedback button
+    {
+        width: 100%;
+    }
+}
+section.header .learn-new-lang
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 4vw;
+    line-height: 1.2;
+
+    display: inline-block;
+    float: right;
+
+    width: 60%;
+    height: 10vw;
+
+    text-align: center; 
+
+    color: #fcc51b;
+    background: rgba(113, 113, 113, .7);
+}
+@media screen and (max-width: 850px)
+{
+    section.header .learn-new-lang
+    {
+        display: none;
+    }
+}
+section.header .learn-new-lang-mob
+{
+    display: none;
+}
+@media screen and (max-width: 850px)
+{
+    section.header .learn-new-lang-mob
+    {
+        font-size: 6vw; 
+
+        display: block;
+
+        width: 100%;
+
+        text-align: center;
+
+        color: #fcc51b;
+        background: rgba(113, 113, 113, .7);
+    }
+}
+
+.main-body
+{
+    width: 100%;
+    height: auto; 
+    padding: 5% 10%;
+}
+.main-body .why-choose-us
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 4vw;
+    line-height: 1.2; 
+
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    padding: 15px;
+
+    text-align: center;
+
+    color: #05050d;
+    background: #fcc51b;
+}
+.main-body .wrapper
+{
+    display: inline-block;
+    float: left;
+
+    width: 22%; 
+    margin: 10% 1%;
+}
+@media screen and (max-width: 850px)
+{
+    .main-body .wrapper
+    {
+        display: none;
+    }
+}
+.main-body .wrapper img
+{
+    display: block;
+
+    margin: auto;
+}
+.main-body .wrapper .text
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2vw;
+    line-height: 1.2;
+
+    text-align: center; 
+
+    color: #05050d;
+}
+.main-body .wrapper .margin-bottom
+{
+    padding: 0 45px;
+}
+.main-body .wrapper .explain-text
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1vw;
+
+    width: 100%;
+    height: 30vw;
+    margin-top: 35px;
+    padding: 10px;
+
+    text-align: left;
+
+    color: #05050d; 
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: #f6d264;
 }

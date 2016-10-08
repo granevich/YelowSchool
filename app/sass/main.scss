@@ -1,8 +1,250 @@
 @import "normalize";
+
+
+//variables
+$YellowColor:rgba(252,197,27, 1);
+$GrayTransparent:rgba(202, 202, 202, 0.7);
+$darkTranparent:rgba(113,113,113,0.7);
+$MainFont:"Times New Roman", sans-serif;
+$FontSegoe:"Segoe UI", sans-serif;
+
+//variables
+
+//mixin
+@mixin MainFont{
+  font-family: $MainFont;
+  color: rgb(40, 40, 40);
+  line-height: 1.1;
+}
+@mixin SecondFont{
+  font-family: $FontSegoe;
+  color: rgb(40, 40, 40);
+  line-height: 1.2;
+}
+//mixin
+
+
+//styling
 section.header{
-  width: 100%;
-  background: url("../img/header_BG.jpg") no-repeat ;
-  background-size:100% 100% ;
+  //width: 100vw;
   height: 100vh;
-  padding: 10%;
+  min-height: 700px;
+  //background: url("../img/header_BG.jpg") repeat-y ;
+  background: transparent;
+  background-size:100% 100% ;
+  padding: 5% 10%;
+  @media screen and (max-width: 850px){
+    padding: 5% ;
+  }
+
+  //left logo
+  .logo-yellow-school{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 270px;
+    height: 85px;
+    background: $YellowColor;
+     @media screen and (max-width: 850px){
+       width: 81%;
+       float: right;
+  }
+    :first-child{
+        font-size: 34px;
+        @include MainFont;
+    }
+    :nth-child(2){
+        font-size: 17.5px;
+       @include MainFont;
+    }
+    .logo_bus{
+      position: absolute;
+      top: 0;
+      right: -100px;
+      @media screen and (max-width: 850px){
+       left: -80px;
+      }
+    }
+  }
+  //end left logo
+
+
+//right logo
+  .course-info{
+    margin-bottom: 15px;
+    display: inline-block;
+    float: right;
+    width: 305px;
+    height: 85px;
+    padding: 5px 30px;
+    background: $GrayTransparent;
+    border-radius: 10px;
+    text-align: right;
+    @media screen and (max-width: 850px){
+      width: 100%;
+      float: left;
+      margin-top: 15px;
+      text-align: left;
+    }
+    :first-child{
+        font-size: 21.667px;
+        @include SecondFont;
+        font-weight: bold;
+    }
+    :last-child{
+        font-size: 14.5px;
+        @include SecondFont;
+        font-weight: bold;
+    }
+  }
+
+//end right logo
+
+  //.line{
+  //  height: 30vh;
+  //  width: 100%;
+  //  @media screen and (max-width: 850px){
+  //    height: 25vh;
+  //  }
+  //}
+
+
+  //feedback
+  .feedback{
+    display: inline-block;
+    float: left;
+    width: 260px;
+    height: 290px;
+    background: rgba($YellowColor, 0.7);
+    padding-top: 50px;
+    padding-left: 30px;
+    @media screen and (max-width: 850px){
+      width: 100%;
+      padding:  10% 5%;
+    }
+    input{
+
+      text-align: center;
+      outline: none;
+      height: 45px;
+      border-radius: 10px;
+      margin-bottom: 26px;
+      @media screen and (max-width: 850px){
+        width: 100%;
+
+      }
+    }
+    button{
+      width: 87%;
+      background:#ed1c24 ;
+      height: 50px;
+      outline: none;
+      border: 1px solid #ed1c24;
+      border-radius: 10px;
+        font-size: 20px;
+        font-family: $FontSegoe;
+        color: rgb(235, 235, 235);
+        line-height: 1.2;
+      @media screen and (max-width: 850px){
+        width: 100%;
+
+      }
+    }
+  }
+
+  //feedback
+  //learn new language
+  .learn-new-lang{
+    display: inline-block;
+    float: right;
+    width: 60%;
+    height: 10vw;
+    background: $darkTranparent;
+      font-size:4vw;
+      font-family:$FontSegoe;
+      color: $YellowColor;
+      line-height: 1.2;
+      text-align: center;
+    @media screen and (max-width: 850px){
+   display: none;
+    }
+  }
+  .learn-new-lang-mob{
+    display: none;
+    @media screen and (max-width: 850px){
+      background: $darkTranparent;
+      display: block;
+      width: 100%;
+      color: $YellowColor;
+      text-align: center;
+      font-size:6vw;
+    }
+  }
+  //end learn new language
+}
+//end header
+
+//main body
+.main-body{
+  padding: 5% 10%;
+  width: 100%;
+  height: auto;
+  //end main body
+  //why choose us
+  .why-choose-us{
+    background: $YellowColor;
+    padding: 15px;
+    margin: 0 auto;
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    font-size: 4vw;
+      font-family: $FontSegoe;
+      color: rgb(5, 5, 13);
+      line-height: 1.2;
+  }
+//why choose us
+  .wrapper{
+    display: inline-block;
+    float: left;
+    margin: 10% 1% ;
+    width: 22%;
+    //TODO breakpoint for tips
+    @media screen and (max-width: 850px){
+      display:none;
+
+    }
+    //background: blue;
+    img{
+      display: block;
+      margin: auto;
+    }
+    .text{
+      font-size: 2vw;
+      font-family: $FontSegoe;
+      color: rgb(5, 5, 13);
+      line-height: 1.2;
+      text-align: center;
+
+    }
+    .margin-bottom{
+      padding: 0 45px;
+    }
+      .explain-text{
+        height: 30vw;
+        width: 100%;
+        margin-top: 35px;
+        padding: 10px;
+        border-radius: 10px;
+        background: #f6d264;
+          text-align: left;
+          font-size: 1.1vw;
+          font-family: $FontSegoe;
+          color: rgb(5, 5, 13);
+        //display: flex;
+        //align-items: center;
+        //justify-content: center;
+      }
+  }
 }
