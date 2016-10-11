@@ -470,6 +470,294 @@ th
     padding: 0;
 }
 
+/* entire container, keeps perspective */
+.flip-container-1
+{
+    display: inline-block;
+    float: left; 
+
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container-1:hover .flipper,
+.flip-container.hover .flipper
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flip-container-1,
+.front,
+.back
+{
+    width: 35vw;
+    height: 30vh;
+}
+
+/* flip speed goes here */
+.flipper
+{
+    position: relative; 
+
+    -webkit-transition: .6s;
+            transition: .6s;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front,
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front
+{
+    z-index: 2;
+    /* for firefox 31 */
+
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); 
+
+    background: blue;
+}
+
+/* back, initially hidden pane */
+.back
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); 
+
+    background: green;
+}
+
+/* entire container, keeps perspective */
+.flip-container-2
+{
+    display: inline-block;
+    float: right; 
+
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container-2:hover .flipper,
+.flip-container.hover .flipper
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flip-container-2,
+.front,
+.back
+{
+    width: 30vw;
+    height: 30vh;
+}
+
+/* flip speed goes here */
+.flipper
+{
+    position: relative; 
+
+    -webkit-transition: .6s;
+            transition: .6s;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front,
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front
+{
+    z-index: 2;
+    /* for firefox 31 */
+
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); 
+
+    background: blue;
+}
+
+/* back, initially hidden pane */
+.back
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); 
+
+    background: green;
+}
+
+/* entire container, keeps perspective */
+.flip-container-3
+{
+    display: inline-block;
+    float: left;
+
+    margin-top: 5%; 
+
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container-3:hover .flipper,
+.flip-container.hover .flipper
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flip-container-3,
+.front,
+.back
+{
+    width: 30vw;
+    height: 30vh;
+}
+
+/* flip speed goes here */
+.flipper
+{
+    position: relative; 
+
+    -webkit-transition: .6s;
+            transition: .6s;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front,
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front
+{
+    z-index: 2;
+    /* for firefox 31 */
+
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); 
+
+    background: blue;
+}
+
+/* back, initially hidden pane */
+.back
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); 
+
+    background: green;
+}
+
+/* entire container, keeps perspective */
+.flip-container-4
+{
+    display: inline-block;
+    float: right;
+
+    margin-top: 5%; 
+
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+}
+
+/* flip the pane when hovered */
+.flip-container-4:hover .flipper,
+.flip-container.hover .flipper
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.flip-container-4,
+.front,
+.back
+{
+    width: 30vw;
+    height: 30vh;
+}
+
+/* flip speed goes here */
+.flipper
+{
+    position: relative; 
+
+    -webkit-transition: .6s;
+            transition: .6s;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front,
+.back
+{
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+/* front pane, placed above back */
+.front
+{
+    z-index: 2;
+    /* for firefox 31 */
+
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg); 
+
+    background: blue;
+}
+
+/* back, initially hidden pane */
+.back
+{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); 
+
+    background: green;
+}
+
 section.header
 {
     height: 100vh;
@@ -696,6 +984,13 @@ section.header .learn-new-lang-mob
     height: auto; 
     padding: 5% 10%;
 }
+@media screen and (max-width: 850px)
+{
+    .main-body
+    {
+        padding: 5%;
+    }
+}
 .main-body .why-choose-us
 {
     font-family: 'Segoe UI', sans-serif;
@@ -711,6 +1006,18 @@ section.header .learn-new-lang-mob
 
     color: #05050d;
     background: #fcc51b;
+}
+@media screen and (max-width: 850px)
+{
+    .main-body .why-choose-us
+    {
+        width: 100%;
+    }
+}
+.main-body .wrapper-for-tip
+{
+    height: auto;
+    margin-bottom: 70%;
 }
 .main-body .wrapper
 {
@@ -763,4 +1070,72 @@ section.header .learn-new-lang-mob
     -webkit-border-radius: 10px;
             border-radius: 10px;
     background: #f6d264;
+}
+
+.margin-fuck
+{
+    margin-bottom: 10% !important;
+}
+
+.wrapper-for-tip-phone
+{
+    margin-bottom: 25%;
+}
+@media screen and (min-width: 850px)
+{
+    .wrapper-for-tip-phone
+    {
+        display: none;
+    }
+}
+
+.first-tip-phone
+{
+    margin: 5% 0;
+}
+
+.text-phone
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 4vw;
+    line-height: 1.2;
+
+    display: inline-block;
+
+    width: 30%;
+
+    text-align: center; 
+
+    color: #05050d;
+}
+.text-phone img
+{
+    display: block;
+
+    width: 100%;
+}
+
+.explain-text-phone
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.9vw;
+
+    display: inline-block;
+    float: right;
+
+    width: 69%;
+    margin-left: 1%;
+    padding: 5%;
+
+    text-align: left;
+
+    color: #05050d; 
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: #f6d264;
+}
+
+.flip-wrapper
+{
+    padding: 5% 10%;
 }
