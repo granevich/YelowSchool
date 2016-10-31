@@ -991,67 +991,152 @@ section.header .learn-new-lang-mob
     background: #f6d264;
 }
 
-.margin-fuck
+div.wrapper-for-tip-medium-screen
 {
-    margin-bottom: 10% !important;
-}
-
-.wrapper-for-tip-phone
-{
-    margin-bottom: 25%;
+    margin-bottom: 30%;
+    padding-top: 5%;
 }
 @media screen and (min-width: 850px)
 {
-    .wrapper-for-tip-phone
+    div.wrapper-for-tip-medium-screen
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 758px)
+{
+    div.wrapper-for-tip-medium-screen
+    {
+        display: none;
+    }
+}
+div.wrapper-for-tip-medium-screen .tip-medium-screen
+{
+    display: inline-block;
+
+    width: 47%;
+    height: 50vw;
+    margin: 1%;
+
+    text-align: center;
+}
+div.wrapper-for-tip-medium-screen .tip-medium-screen img
+{
+    display: inline-block;
+    float: left;
+    clear: both;
+
+    width: 13vw;
+    height: 13vw;
+}
+div.wrapper-for-tip-medium-screen .tip-medium-screen h2
+{
+    font-size: 3.5vw;
+}
+div.wrapper-for-tip-medium-screen .tip-medium-screen div
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2vw;
+
+    width: 90%;
+    height: 32vw;
+    margin: 5% auto;
+    padding: 2%;
+
+    text-align: left;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px; 
+    background: #f6d264;
+}
+
+div.wrapper-for-small-screen
+{
+    margin: 10% 0;
+}
+@media screen and (min-width: 758px)
+{
+    div.wrapper-for-small-screen
+    {
+        display: none;
+    }
+}
+div.wrapper-for-small-screen .tip-for-small-screen .left-block
+{
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 2.5vw;
+
+    display: inline-block;
+    float: left;
+
+    width: 30vw;
+
+    text-align: center;
+}
+div.wrapper-for-small-screen .tip-for-small-screen .left-block img
+{
+    display: block;
+
+    width: 15vw;
+    height: 15vw;
+    margin: auto;
+}
+div.wrapper-for-small-screen .tip-for-small-screen .right-block
+{
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 3vw;
+
+    display: inline-block;
+    float: left;
+
+    width: 55vw;
+    height: 55vw;
+    margin: 0 0 5% 0;
+    padding: 3%;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: #f6d264;
+}
+
+.courses_h1-large
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 5vw;
+    line-height: 1.2; 
+
+    width: 70%;
+    height: 10vw;
+    margin: 0 auto;
+    padding: 2%;
+
+    text-align: center;
+
+    color: #05050d;
+    background: #fcc51b;
+}
+@media screen and (max-width: 850px)
+{
+    .courses_h1-large
     {
         display: none;
     }
 }
 
-.first-tip-phone
+.courses_h1-small
 {
-    margin: 5% 0;
+    width: 80%; 
+    height: 15vw;
+    margin: auto;
+
+    background: rgba(163, 178, 140, .7);
 }
-
-.text-phone
+@media screen and (min-width: 860px)
 {
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 4vw;
-    line-height: 1.2;
-
-    display: inline-block;
-
-    width: 30%;
-
-    text-align: center; 
-
-    color: #05050d;
-}
-.text-phone img
-{
-    display: block;
-
-    width: 100%;
-}
-
-.explain-text-phone
-{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 2.9vw;
-
-    display: inline-block;
-    float: right;
-
-    width: 69%;
-    margin-left: 1%;
-    padding: 5%;
-
-    text-align: left;
-
-    color: #05050d; 
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
-    background: #f6d264;
+    .courses_h1-small
+    {
+        display: none;
+    }
 }
 
 .flip-for-large-screen
@@ -1171,7 +1256,7 @@ section.header .learn-new-lang-mob
 .flip-for-large-screen .front :first-child
 {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 2.5vw;
+    font-size: 2.3vw;
     line-height: 1.2;
 
     text-align: center; 
@@ -1295,6 +1380,7 @@ section.header .learn-new-lang-mob
 
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg); 
+    text-align: center;
 
     background: #c75c5c;
 }
@@ -1480,7 +1566,7 @@ section.header .learn-new-lang-mob
     -webkit-transform: rotateY(0deg);
             transform: rotateY(0deg); 
 
-    background: #4f5d73;
+    background: #ed1c24;
 }
 .flip-for-large-screen .flip-container-3 .back
 {
@@ -1671,7 +1757,7 @@ section.where-find-us #map
     section.where-find-us #map
     {
         width: 100%;
-        height: 100vw;
+        height: 50vw;
     }
 }
 section.where-find-us .finding-us-small-screen
@@ -1785,4 +1871,262 @@ section.where-find-us .finding-us img
     height: 9.5vw;
     margin-top: 7%; 
     margin-right: 10%;
+}
+
+footer.footer-for-large-screen
+{
+    width: 90%;
+    height: 40vw;
+    margin: 25% auto 0;
+
+    background: #414141;
+}
+@media screen and (max-width: 850px)
+{
+    footer.footer-for-large-screen
+    {
+        display: none;
+    }
+}
+footer.footer-for-large-screen .request-the-call
+{
+    position: relative; 
+    z-index: 10;
+
+    height: 10vw;
+    padding: 3% 0;
+
+    background: #969696;
+}
+footer.footer-for-large-screen .request-the-call .triangle
+{
+    position: absolute;
+    z-index: 0;
+    top: 100%;
+    left: 43%;
+
+    width: 0;
+    height: 0;
+
+    border-top: 70px solid #969696; 
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+}
+footer.footer-for-large-screen .request-the-call button
+{
+    font-size: 2vw; 
+
+    display: block;
+
+    width: 60%;
+    height: 4vw;
+    margin: auto;
+
+    color: white;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: red;
+}
+footer.footer-for-large-screen div.footer-info
+{
+    width: 95%;
+    height: 10vw;
+    margin: 22% auto 0;
+}
+footer.footer-for-large-screen div.footer-info .footer-brand
+{
+    font-family: 'Segoe UI', sans-serif; 
+
+    display: inline-block;
+    float: left;
+
+    width: 25%;
+    height: 7vw;
+    margin-top: 2%;
+
+    text-align: center;
+
+    background: #fcc51b;
+}
+footer.footer-for-large-screen div.footer-info .footer-brand :first-child
+{
+    font-size: 2vw; 
+    line-height: 1.7;
+}
+footer.footer-for-large-screen div.footer-info .footer-brand :last-child
+{
+    font-size: 1.3vw;
+}
+footer.footer-for-large-screen div.footer-info .footer-nav-1
+{
+    display: inline-block;
+    float: left; 
+
+    margin-left: 5%;
+}
+footer.footer-for-large-screen div.footer-info .footer-nav-1 ul li
+{
+    list-style-type: none;
+}
+footer.footer-for-large-screen div.footer-info .footer-nav-1 ul li a
+{
+    font-size: 1.7vw;
+    line-height: 1.5;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
+}
+footer.footer-for-large-screen div.footer-info .footer-social
+{
+    position: relative;
+
+    float: right;
+
+    width: 20%;
+}
+footer.footer-for-large-screen div.footer-info .footer-social span.follow-us
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.5vw; 
+
+    position: absolute;
+    top: -45%;
+    right: 20%;
+
+    color: white;
+}
+footer.footer-for-large-screen div.footer-info .footer-social img
+{
+    float: left;
+
+    width: 4vw;
+    height: 4vw; 
+    margin-top: 10%;
+    margin-right: 5%;
+}
+
+footer.footer-for-small-screen
+{
+    width: 90%;
+    height: 80vw;
+    margin: 55% auto 0; 
+
+    background: #414141;
+}
+@media screen and (min-width: 850px)
+{
+    footer.footer-for-small-screen
+    {
+        display: none;
+    }
+}
+footer.footer-for-small-screen .request-the-call
+{
+    position: relative; 
+    z-index: 10;
+
+    height: 15vw;
+    padding: 3% 0;
+
+    background: #969696;
+}
+footer.footer-for-small-screen .request-the-call button
+{
+    font-size: 3.5vw; 
+
+    display: block;
+
+    width: 60%;
+    height: 7vw;
+    margin: 2% auto;
+
+    color: white;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: red;
+}
+footer.footer-for-small-screen .footer-brand
+{
+    font-family: 'Segoe UI', sans-serif; 
+
+    width: 100%;
+    height: 20vw;
+    margin: auto;
+
+    text-align: center;
+
+    background: #fcc51b;
+}
+footer.footer-for-small-screen .footer-brand :first-child
+{
+    font-size: 7vw; 
+    line-height: 1.7;
+}
+footer.footer-for-small-screen .footer-brand :last-child
+{
+    font-size: 3.5vw;
+}
+footer.footer-for-small-screen .footer-navigation
+{
+    display: inline-block;
+    float: left; 
+
+    width: 50%;
+    height: 54%;
+
+    background: #414141;
+}
+footer.footer-for-small-screen .footer-navigation ul li
+{
+    margin-top: 7px;
+
+    list-style-type: none;
+}
+footer.footer-for-small-screen .footer-navigation ul li a
+{
+    font-size: 3vw;
+    line-height: 1.5;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: white;
+}
+footer.footer-for-small-screen .footer-social
+{
+    display: inline-block;
+    float: right; 
+
+    width: 50%;
+    height: 54%;
+
+    background: #414141;
+}
+footer.footer-for-small-screen .follow-us
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 6vw; 
+
+    margin-top: 3%;
+
+    text-align: center;
+
+    color: white;
+}
+footer.footer-for-small-screen .wrapper-for-social
+{
+    margin-top: 25%;
+}
+footer.footer-for-small-screen .wrapper-for-social a
+{
+    margin-left: 6%;
+}
+footer.footer-for-small-screen .wrapper-for-social img
+{
+    width: 10vw;
+    height: 10vw;
 }

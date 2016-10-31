@@ -6,9 +6,11 @@
     <title>YellowSchool</title>
 
     <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/sweetalert.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <!--<script src="js/jquery-3.1.1.slim.min.js"></script>-->
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
     <script src="js/parallax.min.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -27,10 +29,6 @@
         <li><a href="#there_find_us">Где нас найти</a></li>
     </ul>
 </nav>
-
-
-
-
 <nav  class="small-screen">
     <div class="logo-nav-small">
 
@@ -53,9 +51,6 @@
 
 
 
-
-
-
 <main class="header-wrapper" id="top">
   <section class="header parallax-window " data-parallax="scroll" data-image-src="img/header_BG.jpg">
       <div class="upper-header-block">
@@ -68,107 +63,153 @@
               <span>Курсы иностранных языков в 5 минутах от м. Шулявская</span>
           </div>
       </div>
-
-
       <div class="learn-new-lang-mob animated fadeIn">
           Выучи новый язык прямо сейчас!
       </div>
+
+
+
         <div class="feedback">
+            <form name="contactform" id="ajax-contact" method="post" action="form.php">
+                <input type="text"  name='name' id="name" placeholder="Имя, Фамилия" >
 
-                <input type="text" id="name" placeholder="Имя, Фамилия">
+                <input type="tel" name='phone' id="namber" placeholder="(___)___-__-__" >
+                <button id="send-feedback">Оставить заявку</button>
+            </form>
 
-
-
-                <input type="text" id="namber" placeholder="Телефон">
-
-
-            <button>Оставить заявку</button>
         </div>
+
+
+
+
+
         <div class="learn-new-lang animated fadeInDown">
            Выучи новый язык прямо сейчас!
         </div>
-
   </section>
+
+
+
    <section class="main-body tips" id="tips">
        <div class="why-choose-us">
             Почему выбирают нас?
        </div>
-       <div class="wrapper-for-tip-phone">
-           <div class="first-tip-phone">
+   <div class="wrapper-for-tip-medium-screen">
+            <div class="tip-medium-screen">
+                <img src="img/sheetandpen-icon.png" alt="sheet and pen icon" >
+               <h2>80% урока выговорите</h2>
+                <div>
+                    Коммуникативный способ обучения скаждым днем набираетвсе больше популярности: это значит, что 80% урока вы говорите, тем самым улучшая свою речь; и только 20% занятия посвящено грамматике.
+                    <br>
+                    <br>
+                    Мы можем гарантировать что каждый урок пройдет весело и с пользой. К тому же, у нас есть разговорный клуб. Ждем тебя!:)
+                </div>
+            </div>
+            <div class="tip-medium-screen">
 
-               <div class="text-phone">
-                   <img src="img/sheetandpen-icon.png" alt="sheet and pen icon">
+                <img src="img/roket_icon.png" alt="the rocket icon">
+                <h2>Компактные группы</h2>
+                <div>
+                    Преподаватель должен уделать достаточно времени каждому студенту.
 
-                   80% урока вы говорите
+                    Поэтому, мы создаем небольшие группы в уютных и просторных аудиториях.
+                    <br>
+                    <br>
+                    Также, у наших студентов есть возможность
+                    заниматься индивидуально 30 минут с преподавателем каждую неделю - и это входит в стоимость курса!
+                </div>
+            </div>
+            <div class="tip-medium-screen">
 
-               </div>
-               <div class="explain-text-phone">
+                <img src="img/sandclock-icon.png" alt="sand and clock icon">
+                <h2>Удобное время обучения</h2>
+                <div>
+                    У нас учатся люди с разным графиком и для каждого мы стараемся подобрать удобное время занятий.
+                    <br>
+                    <br>
 
-                   Коммуникативный способ обучения скаждым днем набираетвсе больше популярности: это значит, что 80% урока вы говорите, тем самым улучшая свою речь; и только 20% занятия посвящено грамматике.
-                   <br>
-                   <br>
-                   Мы можем гарантировать что каждый урок пройдет весело и с пользой. К тому же, у нас есть разговорный клуб. Ждем тебя!:)
-               </div>
+                    Вдобавок, мы обеспечиваем наших студентов учебниками и различными материалами.
+                    Тем самым делая процесс обучения максимально комфортным и удобным.
+                </div>
 
+
+            </div>
+            <div class="tip-medium-screen">
+                <img src="img/money_icon.png" alt="money icon">
+               <h2>Скидка <br> студентам</h2>
+                <div>
+                    Tак как студентам нужно постоянно экономить, мы делаем скидки до 5% каждому.
+                    <br>
+                    <br>
+
+                    У нас действують разнообразные программы лояльности и выгодные предложения чтобы каждый имел возможность учить новый язык без проблем
+                </div>
+
+
+
+            </div>
+   </div>
+   <div class="wrapper-for-small-screen">
+       <div class="tip-for-small-screen">
+           <div class="left-block">
+               <img src="img/sheetandpen-icon.png" alt="sheet and pen icon" >
+               <h2>80% урока выговорите</h2>
+           </div>
+           <div class="right-block">
+               Коммуникативный способ обучения скаждым днем набираетвсе больше популярности: это значит, что 80% урока вы говорите, тем самым улучшая свою речь; и только 20% занятия посвящено грамматике.
+               <br>
+               <br>
+               Мы можем гарантировать что каждый урок пройдет весело и с пользой. К тому же, у нас есть разговорный клуб. Ждем тебя!:)
            </div>
        </div>
-        <div class="wrapper-for-tip-phone">
-           <div class="first-tip-phone">
+       <div class="tip-for-small-screen">
+           <div class="left-block">
+               <img src="img/roket_icon.png" alt="the rocket icon">
+               <h2>Компактные группы</h2>
+           </div>
+           <div class="right-block">
+               Преподаватель должен уделать достаточно времени каждому студенту.
 
-               <div class="text-phone">
-                   <img src="img/roket_icon.png" alt="the rocket icon">
-                   Компактные группы
-
-               </div>
-               <div class="explain-text-phone">
-                   Преподаватель должен уделать достаточно времени каждому студенту.
-                   Поэтому, мы создаем небольшие группы в уютных и просторных аудиториях.
-                   <br>
-                   <br>
-                   Также, у наших студентов есть возможность
-                   заниматься индивидуально 30 минут с преподавателем каждую неделю
-                   - и это входит в стоимость курса!
-               </div>
+               Поэтому, мы создаем небольшие группы в уютных и просторных аудиториях.
+               <br>
+               <br>
+               Также, у наших студентов есть возможность
+               заниматься индивидуально 30 минут с преподавателем каждую неделю - и это входит в стоимость курса!
            </div>
        </div>
-       <div class="wrapper-for-tip-phone margin-fuck" >
-           <div class="first-tip-phone" >
-               <div class="text-phone">
-                   <img src="img/sandclock-icon.png" alt="sand and clock icon">
-                   Удобное время обучения
-               </div>
-               <div class="explain-text-phone">
-                   У нас учатся люди с разным графиком и для каждого мы стараемся подобрать удобное время занятий.
-                   <br>
-                   <br>
-                   Вдобавок, мы обеспечиваем наших студентов учебниками и различными материалами.
-                   Тем самым делая процесс обучения максимально комфортным и удобным.
-               </div>
+       <div class="tip-for-small-screen">
 
+           <div class="left-block">
+               <img src="img/sandclock-icon.png" alt="sand and clock icon">
+               <h2>Удобное время обучения</h2>
+           </div>
+           <div class="right-block">
+               У нас учатся люди с разным графиком и для каждого мы стараемся подобрать удобное время занятий.
+               <br>
+               <br>
+
+               Вдобавок, мы обеспечиваем наших студентов учебниками и различными материалами.
+               Тем самым делая процесс обучения максимально комфортным и удобным.
            </div>
        </div>
-       <div class="wrapper-for-tip-phone">
-           <div class="first-tip-phone">
-               <div class="text-phone">
-                   <img src="img/money_icon.png" alt="money icon">
-                   Скидка студентам
-               </div>
-               <div class="explain-text-phone">
+       <div class="tip-for-small-screen">
+           <div class="left-block">
+               <img src="img/money_icon.png" alt="money icon">
+               <h2>Скидка <br> студентам</h2>
+           </div>
+           <div class="right-block">
+               Tак как студентам нужно постоянно экономить, мы делаем скидки до 5% каждому.
+               <br>
+               <br>
 
-                   Tак как студентам нужно постоянно экономить, мы делаем скидки до 5 % каждому.
-                   <br>
-                   <br>
-                   У нас действують разнообразные программы лояльности и выгодные предложения чтобы каждый имел возможность учить новый язык без проблем
-
-               </div>
+               У нас действують разнообразные программы лояльности и выгодные предложения чтобы каждый имел возможность учить новый язык без проблем
            </div>
        </div>
 
-
-
-       <div class="wrapper-for-tip">
+   </div>
+   <div class="wrapper-for-tip">
            <div class="first-left-tip wrapper">
-               <img src="img/sheetandpen-icon.png" alt="sheet and pen icon" class="animated flip ">
+               <img src="img/sheetandpen-icon.png" alt="sheet and pen icon" >
                <div class="text">
                    80% урока выговорите
                </div>
@@ -224,12 +265,13 @@
                </div>
            </div>
        </div>
-
-
    </section>
 </main>
-
-<div class="flip-for-large-screen" id="courses">
+<div class="courses_h1-large" id="courses">
+   Наши Курсы
+</div>
+<!--<div id="courses-small"></div>-->
+<div class="flip-for-large-screen" >
     <div class="container-for-flip-1">
         <img src="img/the%20bear.png" alt="the bear logo">
         <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -249,8 +291,8 @@
             <div class="flipper">
                 <div class="front">
                     <span>Курс польского языка </span>
-                    <br>
-                    <br>
+                    <div>" dzień dobry"</div>
+
                     <hr>
                     <div class="how-long">Длительность 5 месяцев</div>
                 </div>
@@ -266,8 +308,8 @@
         <div class="flip-container-2" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
                 <div class="front">
-                    <span>Курс немецкого языка </span>
-                    <div>"Sprehen ze Deutch"</div>
+                    <span>Курс Китайского языка </span>
+                    <div>"Hāi"</div>
                     <hr>
                     <div class="how-long">Длительность 5 месяцев</div>
                 </div>
@@ -279,9 +321,8 @@
         <div class="flip-container-3" ontouchstart="this.classList.toggle('hover');">
             <div class="flipper">
                 <div class="front">
-                    <span>Курс китайского языка </span>
-                    <br>
-                    <br>
+                    <span >Корпортаивное обучение </span>
+                    <div>"Business English"</div>
 
                     <hr>
                     <div class="how-long">Длительность 5 месяцев</div>
@@ -294,16 +335,16 @@
     </div>
 
 </div>
-<div class="flip-for-small-screen" id="courses-small">
-    <div class="row-1">
-        <div class="card row-1-card-1">
-          Kурс англиского языка <br>
+<div class="flip-for-small-screen" >
+    <div class="row-1" >
+        <div class="card row-1-card-1" id="courses-small">
+          Kурс англиского языка <br >
             "all inclusive"
             <hr>
             <div>Длительность: 5 месяцев</div>
             <button>Узнать больше</button>
         </div>
-        <div class="card row-1-card-2">
+        <div class="card row-1-card-2"  >
             Курс польского языка <br>
             "dzień dobry"
             <hr>
@@ -311,7 +352,7 @@
             <button>Узнать больше</button>
 
         </div>
-        <div class="card row-2-card-1">
+        <div class="card row-2-card-1" >
             Курс китайского языка <br>
             "Hāi"
             <hr>
@@ -363,13 +404,73 @@
             095 174 50 16 <br>
             063 675 98 40 <br>
         </div>
-        <img src="img/logo_bus.png" alt="logo_bus" class="logo_bus ">
+        <img src="img/bus-big.png" alt="logo_bus" class="logo_bus ">
 
     </div>
 </section>
 
-<footer>
-    <!--AIzaSyBUiuffAtVd1vKmAGkrzlvnsO8Cr_nJv6w-->
+<footer class="footer-for-large-screen">
+     <div class="request-the-call">
+         <div class="triangle"></div>
+            <button>Заказать обратный звонок</button>
+     </div>
+
+    <div class="footer-info">
+        <div class="footer-brand">
+            <span>yellow school</span><br>
+            <span>школа иностранных языков</span>
+        </div>
+        <div class="footer-nav-1">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">about us</a></li>
+                <li><a href="">courses</a></li>
+            </ul>
+        </div>
+        <div class="footer-nav-1">
+            <ul>
+                <li><a href="">test online</a></li>
+                <li><a href="">contacts</a></li>
+                <li><a href="">follow us</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <span class="follow-us">Follow Us:</span>
+            <a href="https://www.facebook.com/YellowSchool.Kiev/" target="_blank"><img src="img/facebook-icon.png" alt="facebook icon"></a>
+            <a href="https://vk.com/yellow_school" target="_blank"><img src="img/vk-icon.png" alt="vkontakte icon"></a>
+            <a href="https://www.instagram.com/course_yellow.school/" target="_blank"> <img src="img/instagram-icon.png" alt="instagram icon"></a>
+        </div>
+    </div>
+
+</footer>
+<footer class="footer-for-small-screen">
+    <div class="request-the-call">
+        <div class="triangle"></div>
+        <button>Заказать обратный звонок</button>
+    </div>
+    <div class="footer-brand">
+        <span>yellow school</span><br>
+        <span>школа иностранных языков</span>
+    </div>
+    <div class="footer-navigation">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="">courses</a></li>
+            <li><a href="">test online</a></li>
+            <li><a href="">contacts</a></li>
+            <li><a href="">follow us</a></li>
+        </ul>
+    </div>
+    <div class="footer-social">
+        <div class="follow-us">Follow Us</div>
+        <div class="wrapper-for-social">
+            <a href="https://www.facebook.com/YellowSchool.Kiev/" target="_blank"><img src="img/facebook-icon.png" alt="facebook icon"></a>
+            <a href="https://vk.com/yellow_school" target="_blank"><img src="img/vk-icon.png" alt="vkontakte icon"></a>
+            <a href="https://www.instagram.com/course_yellow.school/" target="_blank"> <img src="img/instagram-icon.png" alt="instagram icon"></a>
+        </div>
+
+    </div>
 </footer>
 
 <script>
@@ -407,7 +508,8 @@
     }
     initMap();
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBUiuffAtVd1vKmAGkrzlvnsO8Cr_nJv6w&callback=initMap"
+<!--//AIzaSyBvaOFSM3_0xr_40-lDPu42qLwp_6CVljI-->
+<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBvaOFSM3_0xr_40-lDPu42qLwp_6CVljI&callback=initMap"
         async defer></script>
 </body>
 

@@ -5,6 +5,60 @@
 $(document).ready(function () {
     var smollNav = $('.small-screen');
     var aHref = $('.nav-bottom ul li a');
+//mask input
+    $("#namber").mask("(999)999-99-99" );
+//mask input
+
+
+
+
+
+
+
+
+    //feedback
+    function validate(name, number) {
+        var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
+        var bingo = regExpName.test(name);
+        if(bingo === false){
+            sweetAlert("Ой...", "Вы не ввели имя или номер телефона", "error");
+        }
+        else{
+            swal("Спасибо!", "Мы свяжемся с вами в ближайшее время", "success")
+        }
+        if(number===''){
+            sweetAlert("Ой...", "Вы не ввели имя или номер телефона", "error");
+        }
+    }
+
+    var form = $('#ajax-contact');
+    $(form).submit(function(event) {
+        event.preventDefault();
+    });
+
+    $('#send-feedback').on('click', function () {
+    var name= $('#name').val();
+    var number = $('#namber').val();
+
+    var formData = $(form).serialize();
+        console.log(formData);
+        $.ajax({
+            type: 'POST',
+            url: $(form).attr('action'),
+            data: formData
+        });
+     validate(name, number)
+    });
+
+    //feedback
+
+
+
+
+
+
+
+
 
     //scrolling
     $('a[href^="#"]').click(function(){
@@ -27,8 +81,6 @@ $(document).ready(function () {
             $('nav.nav-large_screen ul').css({'float': 'right',
                 "margin-left":"10px"
             });
-
-
             $('nav.small-screen img').css({
                 width:'14vw',
                 height:'16vw',
@@ -66,7 +118,7 @@ $(document).ready(function () {
         }, 500)
 
     });
-       aHref.on('click', function () {
+    aHref.on('click', function () {
            $('div.nav-bottom').animate({
                height:'toggle'
            }, 500)
