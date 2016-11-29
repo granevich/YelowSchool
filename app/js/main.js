@@ -244,7 +244,6 @@ $('.try_English').on('click', function (event) {
             }
         });
 });
-
 //modal-form_English
 //modal-form_POLISH
     $('.try_Polish').on('click', function (event) {
@@ -296,9 +295,7 @@ $('.try_English').on('click', function (event) {
                 onclick = true;
             }
         });
-
     });
-
 //modal-form_POLISH
 //modal-form_CHINESE
     $('.try_chinese').on('click', function (event) {
@@ -408,7 +405,46 @@ $('.try_English').on('click', function (event) {
 //modal-form_business
 
 
+// modal form test
+// open test modal
+$('#past_the_test').on('click touchend',function () {
+        $('.modal-test-wrapper').css('display', 'flex');
+         $('.questions').load('test.html .load-1', function () {
+            $('.load p').on('click touchend', function () {
+                for(var i=0;i<$('.load p').length; i++){
+                    $('.load p').css('color', 'black');
+                    $(this).css('color', '#fc9c00');
+                    $('.replace_empty').html($(this).html()).css('color', '#fc9c00');
+                    $('.modal-test button').removeClass('disabled').removeAttr('disabled')
+                }
+            })
+         })
+});
+// open test modal
+    var i =2 ;
+    $('#next').on('click touchend', function () {
+        $('.questions').load('test.html .load-'+i, function () {
+            $('.load p').on('click touchend', function () {
+                for(var i=0;i<$('.load p').length; i++){
+                    $('.load p').css('color', 'black');
+                    $(this).css('color', '#fc9c00');
+                    $('.replace_empty').html($(this).html()).css('color', '#fc9c00');
+                    $('.modal-test button').removeClass('disabled').removeAttr('disabled')
+                }
+            })
+        });
+   i++;
 
+});
+
+// close button
+$('.close_icon').on('click', function () {
+    $('.modal-test-wrapper').css('display', 'none');
+});
+
+
+// close button
+// modal form test
 
 
 

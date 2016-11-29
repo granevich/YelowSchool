@@ -1205,6 +1205,240 @@ div.modal-feedback-wrapper .back-modal-feedback button
     }
 }
 
+.modal-test-wrapper
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.modal-test-wrapper .modal-test
+{
+    position: relative; 
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 60%;
+    height: 95%;
+
+    background: #cfcfcf;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test
+    {
+        width: 95%;
+        height: 95%;
+    }
+}
+.modal-test-wrapper .modal-test .how_it_works
+{
+    margin-left: 5%;
+
+    color: rgba(0, 0, 0, .65);
+}
+.modal-test-wrapper .modal-test span
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.2vw;
+
+    text-align: center;
+}
+.modal-test-wrapper .modal-test .close_icon
+{
+    position: absolute;
+    top: -3%;
+    right: 0;
+
+    cursor: pointer;
+}
+.modal-test-wrapper .modal-test .questions
+{
+    width: 80%; 
+    height: 70%;
+    margin: auto;
+}
+.modal-test-wrapper .modal-test .questions .load
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.6vw; 
+
+    text-align: center;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test .questions .load
+    {
+        font-size: 4vw;
+    }
+}
+.modal-test-wrapper .modal-test .questions .load .replace_empty
+{
+    font-size: 2.2vw;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test .questions .load .replace_empty
+    {
+        font-size: 5vw;
+    }
+}
+.modal-test-wrapper .modal-test .questions .load p
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.2vw; 
+
+    cursor: pointer;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test .questions .load p
+    {
+        font-size: 6vw;
+    }
+}
+.modal-test-wrapper .modal-test img
+{
+    width: 6vw;
+    height: 7vw;
+    margin-top: 3%; 
+    margin-left: 5%;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test img
+    {
+        width: 14vw;
+        height: 14vw;
+    }
+}
+.modal-test-wrapper .modal-test button
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 2.2vw; 
+
+    width: 20vw;
+    height: 5vw;
+    margin-right: 5%;
+    margin-bottom: 3%;
+
+    border: 1px solid #fcc51b;
+    background: #fcc51b;
+
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+            align-self: flex-end;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test button
+    {
+        font-size: 4vw; 
+
+        width: 35vw;
+        height: 10vw;
+    }
+}
+.modal-test-wrapper .modal-test button.disabled
+{
+    color: rgba(0, 0, 0, .35);
+    border: none; 
+    background: rgba(0, 0, 0, .25);
+}
+.modal-test-wrapper .modal-test .modal-logo
+{
+    font-family: 'Segoe UI', sans-serif; 
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 25vw;
+    height: 7vw;
+    margin-top: 3%;
+    margin-left: 5%;
+
+    background: #fcc51b;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test .modal-logo
+    {
+        width: 40vw;
+        height: 15vw;
+    }
+}
+.modal-test-wrapper .modal-test .modal-logo :first-child
+{
+    font-size: 2.2vw;
+    line-height: 1.2;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test .modal-logo :first-child
+    {
+        font-size: 4vw;
+        line-height: 1.2;
+    }
+}
+.modal-test-wrapper .modal-test .modal-logo :last-child
+{
+    font-size: 1.2vw;
+    line-height: 1.2;
+}
+@media screen and (max-width: 850px)
+{
+    .modal-test-wrapper .modal-test .modal-logo :last-child
+    {
+        font-size: 2.5vw;
+        line-height: 1.2;
+    }
+}
+
 nav.nav-large_screen:hover
 {
     -webkit-transition: background 1s;
