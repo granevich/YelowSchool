@@ -66,30 +66,17 @@
       <div class="learn-new-lang-mob animated fadeIn">
           Выучи новый язык прямо сейчас!
       </div>
-
-
-
-        <div class="feedback">
-            <form name="contactform" id="ajax-contact" method="post" action="form.php">
-                <input type="text"  name='name' id="name" placeholder="Имя, Фамилия" >
-
-                <input type="tel" name='phone' id="namber" placeholder="(___)___-__-__" >
-                <button id="send-feedback">Оставить заявку</button>
+        <div class="feedback" id="feedback">
+            <form name="contactform" id="form" method="post" action=" ">
+                <input type="text"   name='name' id="name" placeholder="Имя, Фамилия" required  >
+                <input type="tel" name='phone' id="namber" placeholder="(___)___-__-__"  required>
             </form>
-
+            <button id="send-feedback">Заказать звонок</button>
         </div>
-
-
-
-
-
         <div class="learn-new-lang animated fadeInDown">
            Выучи новый язык прямо сейчас!
         </div>
   </section>
-
-
-
    <section class="main-body tips" id="tips">
        <div class="why-choose-us">
             Почему выбирают нас?
@@ -283,6 +270,11 @@
                     <div class="how-long">Длительность 5 месяцев</div>
                 </div>
                 <div class="back">
+                    Пакетный курс <br>
+                    "все включено" <br>
+                    от 700грн\мес <br>
+                    <button class="try_English">Узнать больше</button>
+
 
                 </div>
             </div>
@@ -297,6 +289,10 @@
                     <div class="how-long">Длительность 5 месяцев</div>
                 </div>
                 <div class="back">
+                    Подготовительный <br>
+                    курс польского <br>
+                    от 600 грн\мес <br>
+                    <button class="try_Polish">Узнать больше</button>
 
 
                 </div>
@@ -314,6 +310,12 @@
                     <div class="how-long">Длительность 5 месяцев</div>
                 </div>
                 <div class="back">
+                    Китайский язык <br>
+                    для начинающих <br>
+                    от 700грн\мес <br>
+
+                    <button class="try_chinese"> Узнать больше</button>
+
 
                 </div>
             </div>
@@ -328,6 +330,12 @@
                     <div class="how-long">Длительность 5 месяцев</div>
                 </div>
                 <div class="back">
+                    Корпоративное <br>
+                    обучение и бизнес <br>
+                     английсий <br>
+
+                    <button class="try_business"> Узнать больше</button>
+
 
                 </div>
             </div>
@@ -342,14 +350,14 @@
             "all inclusive"
             <hr>
             <div>Длительность: 5 месяцев</div>
-            <button>Узнать больше</button>
+            <button class="try_English">Узнать больше</button>
         </div>
         <div class="card row-1-card-2"  >
             Курс польского языка <br>
             "dzień dobry"
             <hr>
             <div>Длительность: 5 месяцев</div>
-            <button>Узнать больше</button>
+            <button class="try_Polish">Узнать больше</button>
 
         </div>
         <div class="card row-2-card-1" >
@@ -357,14 +365,14 @@
             "Hāi"
             <hr>
            <div>Длительность: 5 месяцев</div>
-            <button>Узнать больше</button>
+            <button  class="try_chinese">Узнать больше</button>
         </div>
         <div class="card row-2-card-2">
             Корпоротивное обучение <br>
             "Business English"
             <hr>
             <div>Длительность: по договоренности</div>
-            <button>Узнать больше</button>
+            <button class="try_business">Узнать больше</button>
 
         </div>
     </div>
@@ -412,7 +420,7 @@
 <footer class="footer-for-large-screen">
      <div class="request-the-call">
          <div class="triangle"></div>
-            <button>Заказать обратный звонок</button>
+         <button class="ask-feedback">Заказать обратный звонок</button>
      </div>
 
     <div class="footer-info">
@@ -446,7 +454,7 @@
 <footer class="footer-for-small-screen">
     <div class="request-the-call">
         <div class="triangle"></div>
-        <button>Заказать обратный звонок</button>
+        <button class="ask-feedback">Заказать обратный звонок</button>
     </div>
     <div class="footer-brand">
         <span>yellow school</span><br>
@@ -472,8 +480,211 @@
 
     </div>
 </footer>
+<!--ENGLISH-->
+<div class="wrapper-modal-english">
+
+        <div class="modal-content-english">
+
+            <div class="preloader">
+                <div class="spinner">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
+            </div>
+            <form name="contactform" id="form-modal-english" method="post" action=" ">
+                <input type="text"  name='name-modal-english' id="name-modal-english" placeholder="Имя, Фамилия" required >
+                <input type="tel" name='phone-modal-english' id="namber-modal-english" placeholder="(___)___-__-__"  required>
+            </form>
+            <div class="modal-block-for-text-english">
+                Курсы иностранных языков Yellow School на м. Шулявской предлают Вам учить английский вместе с нами! <br>
+                Наши преимущества: <br>
+                <ul>
+                    <li>Гибкий график занятий</li>
+                    <li> 5 занятий в неделю (2 занятия в группе с преподавателем, в группе; 2 разговорных клуба в сб и вс; 1 консультация с преподавателем)</li>
+                    <li>  у нас лучшие преподаватели Киева! Молодые, энергичные и готовы научить новому.</li>
+                    <li>разговорные клубы по выходным и разнообразные игры</li>
+                    <li> коммуникативный метод обучения - 80% урока проходят в обсуждениях. Наша цель состоит в том, чтобы по окончанию курса Вы свободно могли общаться с иностранцем и языковой барьер не был преградой.</li>
+                    <li> учебники и разнообразные материалы обучения входят в стоимость</li>
+                    <li> за 5 месяцев стоимость составляет всего 4800 грн!</li>
+                </ul>
+                Начни учить английский, пока другие только думают об этом!
+            </div>
+
+            <button id="learn-more-english">Учить английский!</button>
+        </div>
+</div>
+<!--ENGLISH-->
+<!--POLISH-->
+<div class="wrapper-modal-polish">
+
+    <div class="modal-content-polish">
+        <div class="box loading"></div>
+
+        <form name="contactform" id="form-modal-polish" method="post" action=" ">
+
+            <input type="text"  name='name-modal-polish' id="name-modal-polish" placeholder="Имя, Фамилия" required >
+            <input type="tel" name='phone-modal-polish' id="namber-modal-polish" placeholder="(___)___-__-__"  required>
+        </form>
+
+        <div class="modal-block-for-text-polish">
+
+
+            Наверное, многие мечтали жить, учиться или просто путешествовать по Европе. Так почему бы не начать с Польши? <br>
+            Мы предоставляем:
+            <ul>
+                <li>лучшие условия для изучения польского языка</li>
+                <li> удобный график занятий</li>
+                <li> подготовка к экзаменам для поступления в польский ВУЗ</li>
+                <li>все наши преподаватели жили в Польше более 10 лет, то есть являются носителями языка</li>
+                <li> учебники и материалы обучения входят в стоимость</li>
+                <li> разговорные клубы на выходных</li>
+                <li> коммуникативный метод изучения польского языка - 80-90% урока Вы говорите!</li>
+                <li>За полный пакет услуг стоимость составляет всего 4800 грн</li>
+            </ul>
+            Спеши записаться в группу по изучению польского языка к лучшим преподавателям.
+            Ждем тебя!
+            Обеспечь себе хорошие будущее в Европе - запишись на курс польского сейчас! :)
+
+        </div>
+
+        <button id="learn-more-polish">Учить Польский!</button>
+    </div>
+</div>
+<!--POLISH-->
+<!--CHINESE-->
+<div class="wrapper-modal-chinese">
+
+    <div class="modal-content-chinese">
+
+
+        <form name="contactform" id="form-modal-chinese" method="post" action=" ">
+
+            <input type="text"  name='name-modal-chinese' id="name-modal-chinese" placeholder="Имя, Фамилия" required >
+            <input type="tel" name='phone-modal-chinese' id="namber-modal-chinese" placeholder="(___)___-__-__"  required>
+        </form>
+
+        <div class="modal-block-for-text-chinese">
+            <!--<div class="windows8">-->
+            <!--<div class="wBall" id="wBall_1">-->
+            <!--<div class="wInnerBall"></div>-->
+            <!--</div>-->
+            <!--<div class="wBall" id="wBall_2">-->
+            <!--<div class="wInnerBall"></div>-->
+            <!--</div>-->
+            <!--<div class="wBall" id="wBall_3">-->
+            <!--<div class="wInnerBall"></div>-->
+            <!--</div>-->
+            <!--<div class="wBall" id="wBall_4">-->
+            <!--<div class="wInnerBall"></div>-->
+            <!--</div>-->
+            <!--<div class="wBall" id="wBall_5">-->
+            <!--<div class="wInnerBall"></div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            Курсы китайского языка в школе Yellow School открывают Вам невероятную возможность погрузиться в культуру и колорит Китая.
+            <br>
+            Эта страна как никакие другие отличается от нас. Если Ваша мечта однажды поехали (или даже пожить) в Китае, то знание языка действительно необходимо! <br>
+            Причины учить китайский вместе с нами: <br>
+            <ul>
+                <li>все наши преподаватели жили и обучались в Китае более 5 лет! Они точно научат вас разговаривать на китайском лучше, чем кто либо</li>
+                <li> не нужно искать учебники или различные материалы - это входит в стоимость и преподаватель индивидуально подбирает их под каждую группу</li>
+                <li>  китайский - невероятно сложный язык, но мы позаботились чтобы при интенсивной работе вы освоили все азы и начали говорить после прохождения курса</li>
+                <li>гибкий график занятий</li>
+                <li>время индивидуально с преподавателем каждую неделю, чтобы Вы могли лучше усвоить материал и уточнить непонятные для Вас моменты.</li>
+                <li> за целый курс обучения (длительность 5 месяцев) цена составляет всего лишь 4800 грн!</li>
+            </ul>
+            Откройте новые возможности для себя с изучением китайского!
+
+        </div>
+
+        <button id="learn-more-chinese">Учить Китайский!</button>
+    </div>
+</div>
+<!--CHINESE-->
+<!--BUSINESS-->
+<div class="wrapper-modal-business">
+
+    <div class="modal-content-business">
+
+
+        <form name="contactform" id="form-modal-business" method="post" action=" ">
+
+            <input type="text"  name='name-modal-business' id="name-modal-business" placeholder="Имя, Фамилия" required >
+            <input type="tel" name='phone-modal-business' id="namber-modal-business" placeholder="(___)___-__-__"  required>
+        </form>
+
+        <div class="modal-block-for-text-business">
+            Инвестировать в свои знания важнее всего в современном мире. Знание английского без сомнений может повысить эффективность работы персонала
+            и работы компании в целом. Именно поэтому мы предлагаем корпоративное обучение бизнес английскому,<br>
+            которое непременно поможет в сделках с зарубежными партнерами и выходу компании на международный уровень.
+            <br>
+            Почему выбирают Yellow School: <br>
+            <ul>
+                <li>экспресс курс обучения бизнес английскому</li>
+                <li>многолетний опыт преподавания</li>
+                <li>подготовка к экзамену LCCI</li>
+                <li>учебники входят в стоимость</li>
+                <li>скидки на корпоративное обучение</li>
+                <li> разговорные клубы, которые помогают понять на практике как вести переговоры на английском</li>
+                <li>каждый сотрудник получает возможность позаниматься, помимо групповых занятий, индивидуально с преподавателем каждую неделю</li>
+                <li>стоимость обсуждается индивидуально </li>
+            </ul>
+            Начните инвестировать в себя и свою компанию уже сегодня!
+
+        </div>
+
+        <button id="learn-more-business">Учить Бизнес Анлийский!</button>
+    </div>
+</div>
+<!--BUSINESS-->
+
+<!--THANKYOU-->
+<div class="modal-alert-wrapper">
+   <span> Спасибо! <br>
+    Мы скоро свяжемся с вами!</span>
+</div>
+<!--THANKYOU-->
+<!--MODAL_INPUT-->
+<div class="modal-feedback-wrapper">
+    <div class="back-modal-feedback">
+        <div class="windows8">
+            <div class="wBall" id="wBall_1">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_2">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_3">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_4">
+                <div class="wInnerBall"></div>
+            </div>
+            <div class="wBall" id="wBall_5">
+                <div class="wInnerBall"></div>
+            </div>
+        </div>
+        <form name="contactform" id="form-modal" method="post" action=" ">
+            <input type="text"   name='name-modal' id="name-modal" placeholder="Имя, Фамилия" required  >
+            <input type="tel" name='phone-modal' id="namber-modal" placeholder="(___)___-__-__"  required>
+        </form>
+        <button id="send-feedback-modal">Заказать звонок</button>
+    </div>
+
+</div>
+
+<!--MODAL_INPUT-->
+<!--MODAL_TEST-->
+
+
+
+<!--MODAL_TEST-->
 
 <script>
+//    window.addEventListener('load', function () {
+//
+//    });
     function initMap() {
         var metro = {lat: 50.454503, lng: 30.447248};
         var YellowSchool = {lat: 50.451180, lng: 30.445316};
@@ -509,7 +720,7 @@
     initMap();
 </script>
 <!--//AIzaSyBvaOFSM3_0xr_40-lDPu42qLwp_6CVljI-->
-<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBvaOFSM3_0xr_40-lDPu42qLwp_6CVljI&callback=initMap"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiXAQ5ksl1tt1YALG5JBQOGARjL-sAxkQ&callback=initMap"
         async defer></script>
 </body>
 

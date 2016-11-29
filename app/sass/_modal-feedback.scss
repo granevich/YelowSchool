@@ -1,0 +1,62 @@
+div.modal-feedback-wrapper{
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  .back-modal-feedback{
+    padding: 2.8vw 0 0 0;
+    position: relative;
+    width: 45vw;
+    height: 25vw;
+    background: #fcc51b;
+    top: 25%;
+    left: 25%;
+    border-radius: 10px;
+    @media screen and(max-width: 850px) {
+      padding: 3vw 0 0 0;
+      width: 95vw;
+      height: 60vw;
+      top: 25%;
+      left: 1%;
+    }
+    #form-modal{
+      width: 100%;
+      input{
+        display: block;
+        margin:4vw auto 0;
+        width: 80%;
+        height: 4vw;
+        text-align: center;
+        font-size: 2.5vw;
+        border: none;
+        @media screen and(max-width: 850px) {
+          margin:8vw auto 0;
+          height: 10vw;
+          font-size: 5vw;
+        }
+      }
+    }
+    button{
+      position: absolute;
+      bottom: -30%;
+      left: 22%;
+      background: red;
+      width: 25vw;
+      height: 5vw;
+      font-size: 2vw;
+      border: 1px solid red;
+      border-radius: 5px;
+      color: white;
+      @media screen and(max-width: 850px) {
+        font-size: 4vw;
+        width: 50vw;
+        height: 10vw;
+      }
+    }
+  }
+
+}

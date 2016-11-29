@@ -1,5 +1,9 @@
 @import "normalize";
-
+@import "modal";
+@import "modal-alert";
+@import "preloader";
+@import "modal-feedback";
+@import "modal-test";
 
 
 
@@ -217,6 +221,7 @@ section.header{
     border-radius: 10px;
     text-align: center;
     @media screen and (max-width: 850px){
+
       padding: 3%;
       width: 50%;
       height: 20vw;
@@ -231,14 +236,14 @@ section.header{
         font-weight: bold;
 
       @media screen and (max-width: 850px){
-        font-size: $NormalFont;
+        font-size: 5vw;
       }
     }
     :last-child{
         font-size: $LargeFont/8;
         @include SecondFont;
         font-weight: bold;
-      @media screen and (max-width: 850px){
+         @media screen and (max-width: 850px){
         font-size: $NormalFont/2;
       }
     }
@@ -271,7 +276,7 @@ section.header{
 
       }
     }
-    button{
+    button{//TODO поменять кнопку в случае необходимости
       margin-top: 10%;
       width: 100%;
       background:#ed1c24 ;
@@ -622,33 +627,26 @@ div.wrapper-for-small-screen{
 
   /* back, initially hidden pane */
   .back {
-    ul{
-      padding: 5px 10px;
-    }
-    li{
-      list-style-type:none;
-      margin: 1%;
-      font-family: $FontSegoe;
-      font-size: 1.3vw;
-      i{
-        color: green;
-        margin-right: 5px;
-      }
-    }
+
+
+    background: url("../img/green-bg.jpg") no-repeat ;
+    padding: 5%;
+    background-size: cover;
+    transform: rotateY(180deg);
+    text-align: center;
+    color: rgb(5, 5, 13);
+    font-size: 2.3vw;
+    font-family: $FontSegoe;
     button{
+      width: 60%;
       color: white;
-      display: block;
-      width: 20vw;
-      height:2.3vw;
-      margin: auto;
-      font-size: 1.2vw;
+      border-radius: 10px;
+      line-height: 1.2;
+      border: 1px solid red;
       background: red;
-      outline: red;
-      border: 1px  solid red;
+      margin-top: 3%;
     }
 
-    background: #76c2af;
-    transform: rotateY(180deg);
   }
 
   .flip-container-1 {
@@ -694,32 +692,25 @@ div.wrapper-for-small-screen{
 
   /* back, initially hidden pane */
   .flip-container-1 .back {
-    ul{
-      padding: 5px 10px;
-    }
-    li{
-      list-style-type:none;
-      margin: 1%;
-      font-family: $FontSegoe;
-      font-size: 1.3vw;
-      i{
-        color: green;
-        margin-right: 5px;
-      }
-    }
-    button{
-      color: white;
-      display: block;
-      width: 20vw;
-      height:2.3vw;
-      margin: auto;
-      font-size: 1.2vw;
-      background: red;
-      outline: red;
-      border: 1px  solid red;
-    }
-    background: #c75c5c;
+
+    background: url("../img/brown-bg.jpg") no-repeat ;
+    padding: 5%;
+    background-size: cover;
     transform: rotateY(180deg);
+    text-align: center;
+    color: rgb(5, 5, 13);
+    font-size: 2.3vw;
+    font-family: $FontSegoe;
+    button{
+      width: 60%;
+      color: white;
+      border-radius: 10px;
+      line-height: 1.2;
+      border: 1px solid red;
+      background: red;
+      margin-top: 3%;
+    }
+    //transform: rotateY(180deg);
   }
   .flip-container-2 {
     float: left;
@@ -763,32 +754,24 @@ div.wrapper-for-small-screen{
 
   /* back, initially hidden pane */
   .flip-container-2 .back {
-    ul{
-      padding: 5px 10px;
-    }
-    li{
-      list-style-type:none;
-      margin: 1%;
-      font-family: $FontSegoe;
-      font-size: 1.3vw;
-      i{
-        color: green;
-        margin-right: 5px;
-      }
-    }
-    button{
-      color: white;
-      display: block;
-      width: 20vw;
-      height:2.3vw;
-      margin: auto;
-      font-size: 1.2vw;
-      background: red;
-      outline: red;
-      border: 1px  solid red;
-    }
-    background: #f6d264;
+    background: url("../img/yellow-bg.jpg") no-repeat ;
+    padding: 5%;
+    background-size: cover;
     transform: rotateY(180deg);
+    text-align: center;
+    color: rgb(5, 5, 13);
+    font-size: 2.3vw;
+    font-family: $FontSegoe;
+    button{
+      width: 60%;
+      color: white;
+      border-radius: 10px;
+      line-height: 1.2;
+      border: 1px solid red;
+      background: red;
+      margin-top: 3%;
+    }
+
   }
   .flip-container-3 {
     float: right;
@@ -832,32 +815,23 @@ div.wrapper-for-small-screen{
 
   /* back, initially hidden pane */
   .flip-container-3 .back {
-    ul{
-      padding: 5px 10px;
-    }
-    li{
-      list-style-type:none;
-      margin: 1%;
-      font-family: $FontSegoe;
-      font-size: 1.3vw;
-      i{
-        color: green;
-        margin-right: 5px;
-      }
-    }
-    button{
-      color: white;
-      display: block;
-      width: 20vw;
-      height:2.3vw;
-      margin: auto;
-      font-size: 1.2vw;
-      background: red;
-      outline: red;
-      border: 1px  solid red;
-    }
-    background: #4f5d73;
+    background: url("../img/red-bg.jpg") no-repeat ;
+    padding: 5%;
+    background-size: cover;
     transform: rotateY(180deg);
+    text-align: center;
+    color: rgb(5, 5, 13);
+    font-size: 2.3vw;
+    font-family: $FontSegoe;
+    button{
+      width: 60%;
+      color: white;
+      border-radius: 10px;
+      line-height: 1.2;
+      border: 1px solid red;
+      background: red;
+      margin-top: 3%;
+    }
   }
 }
 
@@ -893,7 +867,7 @@ div.wrapper-for-small-screen{
     }
     button{
       width:20vw;
-      height: 5vw;
+      height: 7vw;
       color: #fff;
       margin-top: 10%;
       background: red;
@@ -1251,11 +1225,8 @@ footer.footer-for-small-screen{
         height: 10vw;
       }
     }
-
-
-
-
-
-
 }
+
 //footer
+
+

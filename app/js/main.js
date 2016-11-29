@@ -3,63 +3,114 @@
  */
 
 $(document).ready(function () {
+    function modalAlert() {
+       $('.modal-alert-wrapper').fadeIn();
+        $(document).on('click touchend',function (event) {
+            if(event.target.className==='modal-alert-wrapper'){
+                $('.modal-alert-wrapper').fadeOut();
+            }
+        });
+    }
+    //MODAL FEEDBACK
+    $('.ask-feedback').on('click', function () {
+
+
+            $('.modal-feedback-wrapper').fadeIn();
+
+        $(document).on('click touchend',function (event) {
+            if(event.target.className==='modal-feedback-wrapper'){
+                $('.modal-feedback-wrapper').fadeOut();
+            }
+        });
+
+
+        $('#send-feedback-modal').on('click', function (e) {
+
+            var name= $('#name-modal').val();
+            var number = $('#namber-modal').val();
+            var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
+            if(regExpName.test(name) === true && number!=='') {
+                var form = $('#form-modal').serialize();
+                $.ajax({
+                    type: 'POST',
+                    url: 'form.php',
+                    beforeSend: function(){
+                        $('#form-modal').hide();
+                        $('.windows8').show()
+                    },
+                    dataType: "html",
+                    data: form,
+                    success: function(msg){
+                        $('.windows8').hide();
+                        $('#form-modal').show();
+                    }
+
+                })
+                    .done(function () {
+                        modalAlert();
+                        $('#name-modal').val('');
+                        $('#namber-modal').val('');
+                        $('.modal-feedback-wrapper').fadeOut()
+                    })
+            }
+
+        });
+    });
+
+
+    //MODAL FEEDBACK
+
+
     var smollNav = $('.small-screen');
     var aHref = $('.nav-bottom ul li a');
+
 //mask input
     $("#namber").mask("(999)999-99-99" );
+    $("#namber-modal").mask("(999)999-99-99" );
+    $("#namber-modal-english").mask("(999)999-99-99" );
+    $("#namber-modal-polish").mask("(999)999-99-99" );
+    $("#namber-modal-chinese").mask("(999)999-99-99" );
+    $("#namber-modal-business").mask("(999)999-99-99" );
 //mask input
 
 
+    $('input[type="text"]').on(' keypress', function (e) {
+        if (e.keyCode == 8 || e.keyCode == 46) {}
+        else
+        {
+            var letters=' ,.()zxcvbnmasdfghjklqwertyuiopQWERTYUIOPLKJHGFDSAZXCVBNM-йцукенгшщзхъфывапролджэячсмитьбюЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ';
+            return (letters.indexOf(String.fromCharCode(e.which))!=-1);
+        }
+      });
+    // });
 
 
+    // feedback
+    // function validate() {
+    //
+    // }
 
+    $('#send-feedback').on('click', function (e) {
 
-
-
-    //feedback
-    function validate(name, number) {
+        var name= $('#name').val();
+        var number = $('#namber').val();
         var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
-        var bingo = regExpName.test(name);
-        if(bingo === false){
-            sweetAlert("Ой...", "Вы не ввели имя или номер телефона", "error");
+        if(regExpName.test(name) === true && number!=='') {
+            var form = $('#form').serialize();
+            $.ajax({
+                type: 'POST',
+                url: 'form.php',
+                dataType: "html",
+                data: form
+            })
+                .done(function () {
+                    modalAlert();
+                    $('#name').val('');
+                    $('#namber').val('');
+                })
         }
-        else{
-            swal("Спасибо!", "Мы свяжемся с вами в ближайшее время", "success")
-        }
-        if(number===''){
-            sweetAlert("Ой...", "Вы не ввели имя или номер телефона", "error");
-        }
-    }
 
-    var form = $('#ajax-contact');
-    $(form).submit(function(event) {
-        event.preventDefault();
     });
-
-    $('#send-feedback').on('click', function () {
-    var name= $('#name').val();
-    var number = $('#namber').val();
-
-    var formData = $(form).serialize();
-        console.log(formData);
-        $.ajax({
-            type: 'POST',
-            url: $(form).attr('action'),
-            data: formData
-        });
-     validate(name, number)
-    });
-
-    //feedback
-
-
-
-
-
-
-
-
-
     //scrolling
     $('a[href^="#"]').click(function(){
 //Сохраняем значение атрибута href в переменной:
@@ -125,6 +176,250 @@ $(document).ready(function () {
        }) ;
 
     //yellow bus nav small screen
+
+
+
+//modal-form_ENGLISH
+    var wrapper;
+    function allInOne() {
+        var WrapperClassname = wrapper.attr('class');
+        wrapper.fadeIn();
+        console.log(wrapper);
+        event.stopPropagation();
+        $(document).on('click touchend',function (event) {
+            if(event.target.className===WrapperClassname){
+
+                wrapper.fadeOut();
+            }
+        });
+
+    }
+$('.try_English').on('click', function (event) {
+    wrapper = $('.wrapper-modal-english');
+   var onclick = true;
+    allInOne();
+
+        $('#learn-more-english').on('click', function (e) {
+            if(onclick===true) {
+                $('.modal-block-for-text-english').fadeOut();
+                $('#form-modal-english').fadeIn();
+                $(this).text('Отправить');
+                onclick = false
+            }
+            else{
+                var name= $('#name-modal-english').val();
+                var number = $('#namber-modal-english').val();
+                var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
+                if(regExpName.test(name) === true && number!=='') {
+                    var form = $('#form-modal-english').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'form.php',
+                        dataType: "html",
+                        data: form,
+                        beforeSend:function () {
+                            $('#form-modal-english').hide();
+                           $('.preloader').show();
+                       },
+                         success:function () {
+                             $('.preloader').hide();
+                             modalAlert();
+                       }
+
+                    })
+                        .done(function () {
+                            wrapper.hide();
+                           $('#name-modal-english').val('');
+                           $('#namber-modal-english').val('');
+
+                            $('.modal-block-for-text-english').show();
+                            $('#learn-more-english').show().text('Учить английский!');
+                            onclick = false;
+                        })
+                        .error(function () {
+                            alert('error')
+                        })
+                }
+                onclick = true;
+            }
+        });
+});
+
+//modal-form_English
+//modal-form_POLISH
+    $('.try_Polish').on('click', function (event) {
+        wrapper = $('.wrapper-modal-polish');
+       var onclick = true;
+        allInOne();
+
+        $('#learn-more-polish').on('click', function (e) {
+            if(onclick===true) {
+                $('.modal-block-for-text-polish').fadeOut();
+                $('#form-modal-polish').fadeIn();
+                $(this).text('Отправить');
+                onclick = false
+            }
+            else{
+                var name= $('#name-modal-polish').val();
+                var number = $('#namber-modal-polish').val();
+                var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
+                if(regExpName.test(name) === true && number!=='') {
+                    var form = $('#form-modal-polish').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'form.php',
+                        dataType: "html",
+                        data: form,
+                        beforeSend:function () {
+
+                            // $('.windows8').show();
+                        },
+                        success:function () {
+                            // $('.windows8').hide();
+                            modalAlert();
+                        }
+
+                    })
+                        .done(function () {
+                            wrapper.hide();
+                            $('#form-modal-polish').hide();
+                            $('#name-modal-polish').val('');
+                            $('#namber-modal-polish').val('');
+                            $('.modal-block-for-text-polish').show();
+                            $('#learn-more-polish').show().text('Учить польский!');
+                            onclick = false;
+                        })
+                        .error(function () {
+                            alert('error')
+                        })
+                }
+                onclick = true;
+            }
+        });
+
+    });
+
+//modal-form_POLISH
+//modal-form_CHINESE
+    $('.try_chinese').on('click', function (event) {
+        wrapper = $('.wrapper-modal-chinese');
+        var onclick = true;
+        allInOne();
+
+        $('#learn-more-chinese').on('click', function (e) {
+            if(onclick===true) {
+                $('.modal-block-for-text-chinese').fadeOut();
+                $('#form-modal-chinese').fadeIn();
+                $(this).text('Отправить');
+                onclick = false
+            }
+            else{
+                var name= $('#name-modal-chinese').val();
+                var number = $('#namber-modal-chinese').val();
+                var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
+                if(regExpName.test(name) === true && number!=='') {
+                    var form = $('#form-modal-chinese').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'form.php',
+                        dataType: "html",
+                        data: form,
+                        beforeSend:function () {
+
+                            // $('.windows8').show();
+                        },
+                        success:function () {
+                            // $('.windows8').hide();
+                            modalAlert();
+                        }
+
+                    })
+                        .done(function () {
+                            wrapper.hide();
+                            $('#form-modal-chinese').hide();
+                            $('#name-modal-chinese').val('');
+                            $('#namber-modal-chinese').val('');
+                            $('.modal-block-for-text-chinese').show();
+                            $('#learn-more-chinese').show().text('Учить китайский!');
+                            onclick = false;
+                        })
+                        .error(function () {
+                            alert('error')
+                        })
+                }
+                onclick = true;
+            }
+        });
+
+    });
+   $('.try_business').on('click', function (event) {
+        wrapper = $('.wrapper-modal-business');
+        var onclick = true;
+        allInOne();
+
+        $('#learn-more-business').on('click', function (e) {
+            if(onclick===true) {
+                $('.modal-block-for-text-business').fadeOut();
+                $('#form-modal-business').fadeIn();
+                $(this).text('Отправить');
+                onclick = false
+            }
+            else{
+                var name= $('#name-modal-business').val();
+                var number = $('#namber-modal-business').val();
+                var regExpName = /^[А-Яа-яA-Za-z ,.'-]+$/i;
+                if(regExpName.test(name) === true && number!=='') {
+                    var form = $('#form-modal-business').serialize();
+                    $.ajax({
+                        type: 'POST',
+                        url: 'form.php',
+                        dataType: "html",
+                        data: form,
+                        beforeSend:function () {
+
+                            // $('.windows8').show();
+                        },
+                        success:function () {
+                            // $('.windows8').hide();
+                            modalAlert();
+                        }
+
+                    })
+                        .done(function () {
+                            wrapper.hide();
+                            $('#form-modal-business').hide();
+                            $('#name-modal-business').val('');
+                            $('#namber-modal-business').val('');
+                            $('.modal-block-for-text-business').show();
+                            $('#learn-more-business').show().text('Учить китайский!');
+                            onclick = false;
+                        })
+                        .error(function () {
+                            alert('error')
+                        })
+                }
+                onclick = true;
+            }
+        });
+
+    });
+
+
+//modal-form_business
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

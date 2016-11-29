@@ -470,6 +470,741 @@ th
     padding: 0;
 }
 
+div.wrapper-modal-english
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none; 
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+}
+div.wrapper-modal-english #form-modal-english
+{
+    display: none;
+}
+div.wrapper-modal-english .modal-content-english
+{
+    position: relative;
+
+    width: 80%;
+    height: 80%;
+    margin: 10vh auto;
+
+    background: url('../img/english_modal.jpg');
+    background-size: cover;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-english .modal-content-english
+    {
+        height: 90vh;
+        margin: 5vh auto;
+    }
+}
+div.wrapper-modal-english .modal-content-english .modal-block-for-text-english
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2vw;
+
+    display: inline-block;
+    float: right;
+    overflow: hidden; 
+
+    width: 55%;
+    height: 75%;
+    margin: 5% 7%;
+    padding: 1%;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: rgba(255, 255, 255, .66);
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-english .modal-content-english .modal-block-for-text-english
+    {
+        font-size: 2vh; 
+
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+}
+div.wrapper-modal-english .modal-content-english button
+{
+    font-size: 1.5vw; 
+
+    position: absolute;
+    right: 20%;
+    bottom: 10px;
+
+    width: 25vw;
+    height: 7vh;
+
+    color: white;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: red;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-english .modal-content-english button
+    {
+        font-size: 3.5vw; 
+
+        right: 25%;
+        bottom: 10px;
+
+        width: 40vw;
+        height: 10vh;
+    }
+}
+div.wrapper-modal-english form
+{
+    position: absolute;
+    right: 16vw; 
+    bottom: 30vh;
+
+    overflow: hidden;
+
+    width: 25vw;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-english form
+    {
+        right: 4vw;
+
+        width: 70vw;
+    }
+}
+div.wrapper-modal-english form input
+{
+    font-size: 4.1vh; 
+
+    width: 100%;
+    height: 10vh;
+    margin: 12% 0;
+
+    text-align: center;
+
+    border: none;
+}
+
+div.wrapper-modal-polish
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none; 
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+}
+div.wrapper-modal-polish #form-modal-polish
+{
+    display: none;
+}
+div.wrapper-modal-polish .modal-content-polish
+{
+    position: relative;
+
+    width: 80%;
+    height: 80%;
+    margin: 10vh auto;
+
+    background: url('../img/Polish_modal.jpg');
+    background-size: cover;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-polish .modal-content-polish
+    {
+        height: 90vh;
+        margin: 5vh auto;
+    }
+}
+div.wrapper-modal-polish .modal-content-polish .modal-block-for-text-polish
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.2vw;
+
+    display: inline-block;
+    float: left;
+    overflow: hidden; 
+
+    width: 55%;
+    height: 75%;
+    margin: 5% 7%;
+    padding: 1%;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: rgba(255, 255, 255, .66);
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-polish .modal-content-polish .modal-block-for-text-polish
+    {
+        font-size: 2vh; 
+
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+}
+div.wrapper-modal-polish .modal-content-polish button
+{
+    font-size: 1.5vw; 
+
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+
+    width: 25vw;
+    height: 7vh;
+
+    color: white;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: red;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-polish .modal-content-polish button
+    {
+        font-size: 3.5vw; 
+
+        bottom: 10px;
+        left: 25%;
+
+        width: 40vw;
+        height: 10vh;
+    }
+}
+div.wrapper-modal-polish form
+{
+    position: absolute;
+    bottom: 30vh;
+    left: 12vw; 
+
+    overflow: hidden;
+
+    width: 25vw;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-polish form
+    {
+        left: 5vw;
+
+        width: 70vw;
+    }
+}
+div.wrapper-modal-polish form input
+{
+    font-size: 4.1vh; 
+
+    width: 100%;
+    height: 10vh;
+    margin: 12% 0;
+
+    text-align: center;
+
+    border: none;
+}
+
+div.wrapper-modal-chinese
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none; 
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+}
+div.wrapper-modal-chinese #form-modal-chinese
+{
+    display: none;
+}
+div.wrapper-modal-chinese .modal-content-chinese
+{
+    position: relative;
+
+    width: 80%;
+    height: 80%;
+    margin: 10vh auto;
+
+    background: url('../img/chinese_modal.jpg');
+    background-size: cover;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-chinese .modal-content-chinese
+    {
+        height: 90vh;
+        margin: 5vh auto;
+    }
+}
+div.wrapper-modal-chinese .modal-content-chinese .modal-block-for-text-chinese
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1vw;
+
+    display: inline-block;
+    float: left;
+    overflow: hidden; 
+
+    width: 55%;
+    height: 75%;
+    margin: 5% 7%;
+    padding: 1%;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: rgba(255, 255, 255, .66);
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-chinese .modal-content-chinese .modal-block-for-text-chinese
+    {
+        font-size: 1.85vh; 
+
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+}
+div.wrapper-modal-chinese .modal-content-chinese button
+{
+    font-size: 1.5vw; 
+
+    position: absolute;
+    bottom: 10px;
+    left: 15%;
+
+    width: 25vw;
+    height: 7vh;
+
+    color: white;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: red;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-chinese .modal-content-chinese button
+    {
+        font-size: 3.5vw; 
+
+        bottom: 10px;
+        left: 25%;
+
+        width: 40vw;
+        height: 10vh;
+    }
+}
+div.wrapper-modal-chinese form
+{
+    position: absolute;
+    bottom: 30vh;
+    left: 12vw; 
+
+    overflow: hidden;
+
+    width: 25vw;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-chinese form
+    {
+        left: 5vw;
+
+        width: 70vw;
+    }
+}
+div.wrapper-modal-chinese form input
+{
+    font-size: 4.1vh; 
+
+    width: 100%;
+    height: 10vh;
+    margin: 12% 0;
+
+    text-align: center;
+
+    border: none;
+}
+
+div.wrapper-modal-business
+{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none; 
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+}
+div.wrapper-modal-business #form-modal-business
+{
+    display: none;
+}
+div.wrapper-modal-business .modal-content-business
+{
+    position: relative;
+
+    width: 80%;
+    height: 80%;
+    margin: 10vh auto;
+
+    background: url('../img/bussines_modal.jpg');
+    background-size: cover;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-business .modal-content-business
+    {
+        height: 90vh;
+        margin: 5vh auto;
+    }
+}
+div.wrapper-modal-business .modal-content-business .modal-block-for-text-business
+{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1vw;
+
+    display: inline-block;
+    overflow: hidden; 
+
+    width: 80%;
+    margin: 10%;
+    padding: 1%;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: rgba(255, 255, 255, .66);
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-business .modal-content-business .modal-block-for-text-business
+    {
+        font-size: 1.85vh; 
+
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+    }
+}
+div.wrapper-modal-business .modal-content-business button
+{
+    font-size: 1.5vw; 
+
+    position: absolute;
+    bottom: 10px;
+    left: 32%;
+
+    width: 25vw;
+    height: 7vh;
+
+    color: white;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    background: red;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-business .modal-content-business button
+    {
+        font-size: 3.5vw; 
+
+        bottom: 10px;
+        left: 25%;
+
+        width: 40vw;
+        height: 10vh;
+    }
+}
+div.wrapper-modal-business form
+{
+    position: absolute;
+    bottom: 30vh;
+    left: 14vw; 
+
+    overflow: hidden;
+
+    width: 50vw;
+}
+@media screen and (max-width: 850px)
+{
+    div.wrapper-modal-business form
+    {
+        left: 5vw;
+
+        width: 70vw;
+    }
+}
+div.wrapper-modal-business form input
+{
+    font-size: 4.1vh; 
+
+    width: 100%;
+    height: 10vh;
+    margin: 6% 0;
+
+    text-align: center;
+
+    border: none;
+}
+
+.modal-alert-wrapper
+{
+    font-size: 5vw;
+
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+
+    color: white; 
+    background: rgba(0, 0, 0, .7);
+}
+.modal-alert-wrapper span
+{
+    position: absolute;
+    top: 45%;
+    left: 15%;
+}
+
+.preloader
+{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+
+    display: none;
+}
+@media screen and (max-width: 850px)
+{
+    .preloader
+    {
+        top: 15%;
+        left: 40%;
+    }
+}
+
+.spinner
+{
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+            animation: sk-rotate 2.0s infinite linear; 
+    text-align: center;
+}
+
+.dot1,
+.dot2
+{
+    position: absolute;
+    top: 0;
+
+    display: inline-block;
+
+    width: 60%;
+    height: 60%;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out; 
+
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    background-color: #333;
+}
+
+.dot2
+{
+    top: auto;
+    bottom: 0;
+
+    -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes sk-rotate
+{
+    100%
+    {
+        -webkit-transform: rotate(360deg); 
+                transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sk-bounce
+{
+    0%,
+    100%
+    {
+        -webkit-transform: scale(0);
+    }
+    50%
+    {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bounce
+{
+    0%,
+    100%
+    {
+        -webkit-transform: scale(0); 
+                transform: scale(0);
+    }
+    50%
+    {
+        -webkit-transform: scale(1); 
+                transform: scale(1);
+    }
+}
+
+div.modal-feedback-wrapper
+{
+    position: fixed;
+    z-index: 100; 
+    top: 0;
+    left: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .7);
+}
+div.modal-feedback-wrapper .back-modal-feedback
+{
+    position: relative;
+    top: 25%;
+    left: 25%;
+
+    width: 45vw;
+    height: 25vw;
+    padding: 2.8vw 0 0 0;
+
+    -webkit-border-radius: 10px;
+            border-radius: 10px; 
+    background: #fcc51b;
+}
+@media screen and (max-width: 850px)
+{
+    div.modal-feedback-wrapper .back-modal-feedback
+    {
+        top: 25%;
+        left: 1%; 
+
+        width: 95vw;
+        height: 60vw;
+        padding: 3vw 0 0 0;
+    }
+}
+div.modal-feedback-wrapper .back-modal-feedback #form-modal
+{
+    width: 100%;
+}
+div.modal-feedback-wrapper .back-modal-feedback #form-modal input
+{
+    font-size: 2.5vw;
+
+    display: block;
+
+    width: 80%;
+    height: 4vw;
+    margin: 4vw auto 0;
+
+    text-align: center;
+
+    border: none;
+}
+@media screen and (max-width: 850px)
+{
+    div.modal-feedback-wrapper .back-modal-feedback #form-modal input
+    {
+        font-size: 5vw; 
+
+        height: 10vw;
+        margin: 8vw auto 0;
+    }
+}
+div.modal-feedback-wrapper .back-modal-feedback button
+{
+    font-size: 2vw;
+
+    position: absolute;
+    bottom: -30%;
+    left: 22%;
+
+    width: 25vw;
+    height: 5vw;
+
+    color: white; 
+    border: 1px solid red;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background: red;
+}
+@media screen and (max-width: 850px)
+{
+    div.modal-feedback-wrapper .back-modal-feedback button
+    {
+        font-size: 4vw;
+
+        width: 50vw;
+        height: 10vw;
+    }
+}
+
 nav.nav-large_screen:hover
 {
     -webkit-transition: background 1s;
@@ -1293,43 +2028,30 @@ div.wrapper-for-small-screen .tip-for-small-screen .right-block
 }
 .flip-for-large-screen .back
 {
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 2.3vw;
+
+    padding: 5%;
+
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg); 
+            transform: rotateY(180deg);
+    text-align: center;
 
-    background: #76c2af;
-}
-.flip-for-large-screen .back ul
-{
-    padding: 5px 10px;
-}
-.flip-for-large-screen .back li
-{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.3vw; 
-
-    margin: 1%;
-
-    list-style-type: none;
-}
-.flip-for-large-screen .back li i
-{
-    margin-right: 5px; 
-
-    color: green;
+    color: #05050d;
+    background: url('../img/green-bg.jpg') no-repeat;
+    background-size: cover;
 }
 .flip-for-large-screen .back button
 {
-    font-size: 1.2vw;
+    line-height: 1.2;
 
-    display: block;
-
-    width: 20vw;
-    height: 2.3vw;
-    margin: auto;
+    width: 60%;
+    margin-top: 3%; 
 
     color: white;
-    border: 1px  solid red; 
-    outline: red;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     background: red;
 }
 .flip-for-large-screen .flip-container-1
@@ -1386,43 +2108,30 @@ div.wrapper-for-small-screen .tip-for-small-screen .right-block
 }
 .flip-for-large-screen .flip-container-1 .back
 {
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 2.3vw;
+
+    padding: 5%;
+
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg); 
+            transform: rotateY(180deg);
+    text-align: center;
 
-    background: #c75c5c;
-}
-.flip-for-large-screen .flip-container-1 .back ul
-{
-    padding: 5px 10px;
-}
-.flip-for-large-screen .flip-container-1 .back li
-{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.3vw; 
-
-    margin: 1%;
-
-    list-style-type: none;
-}
-.flip-for-large-screen .flip-container-1 .back li i
-{
-    margin-right: 5px; 
-
-    color: green;
+    color: #05050d;
+    background: url('../img/brown-bg.jpg') no-repeat;
+    background-size: cover;
 }
 .flip-for-large-screen .flip-container-1 .back button
 {
-    font-size: 1.2vw;
+    line-height: 1.2;
 
-    display: block;
-
-    width: 20vw;
-    height: 2.3vw;
-    margin: auto;
+    width: 60%;
+    margin-top: 3%; 
 
     color: white;
-    border: 1px  solid red; 
-    outline: red;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     background: red;
 }
 .flip-for-large-screen .flip-container-2
@@ -1478,43 +2187,30 @@ div.wrapper-for-small-screen .tip-for-small-screen .right-block
 }
 .flip-for-large-screen .flip-container-2 .back
 {
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 2.3vw;
+
+    padding: 5%;
+
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg); 
+            transform: rotateY(180deg);
+    text-align: center;
 
-    background: #f6d264;
-}
-.flip-for-large-screen .flip-container-2 .back ul
-{
-    padding: 5px 10px;
-}
-.flip-for-large-screen .flip-container-2 .back li
-{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.3vw; 
-
-    margin: 1%;
-
-    list-style-type: none;
-}
-.flip-for-large-screen .flip-container-2 .back li i
-{
-    margin-right: 5px; 
-
-    color: green;
+    color: #05050d;
+    background: url('../img/yellow-bg.jpg') no-repeat;
+    background-size: cover;
 }
 .flip-for-large-screen .flip-container-2 .back button
 {
-    font-size: 1.2vw;
+    line-height: 1.2;
 
-    display: block;
-
-    width: 20vw;
-    height: 2.3vw;
-    margin: auto;
+    width: 60%;
+    margin-top: 3%; 
 
     color: white;
-    border: 1px  solid red; 
-    outline: red;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     background: red;
 }
 .flip-for-large-screen .flip-container-3
@@ -1570,43 +2266,30 @@ div.wrapper-for-small-screen .tip-for-small-screen .right-block
 }
 .flip-for-large-screen .flip-container-3 .back
 {
+    font-family: 'Segoe UI', sans-serif; 
+    font-size: 2.3vw;
+
+    padding: 5%;
+
     -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg); 
+            transform: rotateY(180deg);
+    text-align: center;
 
-    background: #4f5d73;
-}
-.flip-for-large-screen .flip-container-3 .back ul
-{
-    padding: 5px 10px;
-}
-.flip-for-large-screen .flip-container-3 .back li
-{
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 1.3vw; 
-
-    margin: 1%;
-
-    list-style-type: none;
-}
-.flip-for-large-screen .flip-container-3 .back li i
-{
-    margin-right: 5px; 
-
-    color: green;
+    color: #05050d;
+    background: url('../img/red-bg.jpg') no-repeat;
+    background-size: cover;
 }
 .flip-for-large-screen .flip-container-3 .back button
 {
-    font-size: 1.2vw;
+    line-height: 1.2;
 
-    display: block;
-
-    width: 20vw;
-    height: 2.3vw;
-    margin: auto;
+    width: 60%;
+    margin-top: 3%; 
 
     color: white;
-    border: 1px  solid red; 
-    outline: red;
+    border: 1px solid red;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     background: red;
 }
 
@@ -1660,7 +2343,7 @@ div.wrapper-for-small-screen .tip-for-small-screen .right-block
     font-size: 2.2vw;
 
     width: 20vw;
-    height: 5vw;
+    height: 7vw;
     margin-top: 10%;
 
     color: #fff;

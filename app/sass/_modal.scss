@@ -1,0 +1,362 @@
+$FontSegoe:"Segoe UI", sans-serif;
+
+//modal_ENGLISH
+
+div.wrapper-modal-english{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+
+  #form-modal-english{
+    display: none;
+  }
+
+  .modal-content-english{
+    position: relative;
+    width: 80%;
+    height:80%;
+    margin: 10vh auto;
+    background: url("../img/english_modal.jpg");
+    background-size: cover;
+
+    @media screen and(max-width: 850px){
+      height: 90vh;
+      margin: 5vh auto;
+    }
+      .modal-block-for-text-english{
+        display: inline-block;
+        width: 55%;
+        height:75%;
+        float: right;
+        margin: 5% 7%;
+        padding: 1%;
+        background: rgba(255, 255, 255, 0.66);
+        border-radius: 10px;
+        font-family: $FontSegoe;
+        font-size: 1.2vw;
+        overflow: hidden;
+        @media screen and(max-width: 850px){
+          width: 100%;
+          margin: 0;
+          padding: 5%;
+          font-size: 2vh;
+        }
+
+      }
+    button{
+      position: absolute;
+      bottom: 10px;
+      right: 20%;
+      background: red;
+
+      border-radius: 10px;
+      height: 7vh;
+      width: 25vw;
+      border: 1px solid red;
+      color:white;
+      font-size: 1.5vw;
+      @media screen and(max-width: 850px){
+        bottom: 10px;
+        right: 25%;
+        height: 10vh;
+        width: 40vw;
+        font-size: 3.5vw;
+      }
+
+    }
+  }
+  form{
+    overflow: hidden;
+    width: 25vw;
+    position: absolute;
+    bottom: 30vh;
+    right:16vw;
+    @media screen and(max-width: 850px){
+      right:4vw;
+      width:70vw;
+    }
+    input{
+      height: 10vh;
+      margin: 12% 0;
+      width: 100%;
+      border: none;
+      text-align: center;
+      font-size: 4.1vh;
+
+    }
+  }
+}
+//POLISH
+div.wrapper-modal-polish{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+
+  #form-modal-polish{
+    display: none;
+  }
+
+  .modal-content-polish{
+    position: relative;
+    width: 80%;
+    height:80%;
+    margin: 10vh auto;
+    background: url("../img/Polish_modal.jpg");
+    background-size: cover;
+
+    @media screen and(max-width: 850px){
+      height: 90vh;
+      margin: 5vh auto;
+    }
+    .modal-block-for-text-polish{
+      display: inline-block;
+      width: 55%;
+      height:75%;
+      float: left;
+      margin: 5% 7%;
+      padding: 1%;
+      background: rgba(255, 255, 255, 0.66);
+      border-radius: 10px;
+      font-family: $FontSegoe;
+       font-size: 1.2vw;
+      overflow: hidden;
+      @media screen and(max-width: 850px){
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+        font-size: 2vh;
+      }
+
+    }
+    button{
+      position: absolute;
+      bottom: 10px;
+      left: 15%;
+      background: red;
+      border-radius: 10px;
+      height: 7vh;
+      width: 25vw;
+      border: 1px solid red;
+      color:white;
+      font-size: 1.5vw;
+      @media screen and(max-width: 850px){
+        bottom: 10px;
+        left: 25%;
+        height: 10vh;
+        width: 40vw;
+        font-size: 3.5vw;
+      }
+
+    }
+  }
+  form{
+    overflow: hidden;
+    width: 25vw;
+    position: absolute;
+    bottom: 30vh;
+    left:12vw;
+    @media screen and(max-width: 850px){
+      left:5vw;
+      width:70vw;
+    }
+    input{
+      height: 10vh;
+      margin: 12% 0;
+      width: 100%;
+      border: none;
+      text-align: center;
+      font-size: 4.1vh;
+
+    }
+  }
+}
+//CHINESE
+div.wrapper-modal-chinese{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+
+  #form-modal-chinese{
+    display: none;
+  }
+
+  .modal-content-chinese{
+    position: relative;
+    width: 80%;
+    height:80%;
+    margin: 10vh auto;
+    background: url("../img/chinese_modal.jpg");
+    background-size: cover;
+
+    @media screen and(max-width: 850px){
+      height: 90vh;
+      margin: 5vh auto;
+    }
+    .modal-block-for-text-chinese{
+      display: inline-block;
+      width: 55%;
+      height:75%;
+      float: left;
+      margin: 5% 7%;
+      padding: 1%;
+      background: rgba(255, 255, 255, 0.66);
+      border-radius: 10px;
+      font-family: $FontSegoe;
+       font-size: 1vw;
+      overflow: hidden;
+      @media screen and(max-width: 850px){
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+        font-size: 1.85vh;
+      }
+
+    }
+    button{
+      position: absolute;
+      bottom: 10px;
+      left: 15%;
+      background: red;
+      border-radius: 10px;
+      height: 7vh;
+      width: 25vw;
+      border: 1px solid red;
+      color:white;
+      font-size: 1.5vw;
+      @media screen and(max-width: 850px){
+        bottom: 10px;
+        left: 25%;
+        height: 10vh;
+        width: 40vw;
+        font-size: 3.5vw;
+      }
+
+    }
+  }
+  form{
+    overflow: hidden;
+    width: 25vw;
+    position: absolute;
+    bottom: 30vh;
+    left:12vw;
+    @media screen and(max-width: 850px){
+      left:5vw;
+      width:70vw;
+    }
+    input{
+      height: 10vh;
+      margin: 12% 0;
+      width: 100%;
+      border: none;
+      text-align: center;
+      font-size: 4.1vh;
+
+    }
+  }
+}
+
+//CHINESE
+//business
+div.wrapper-modal-business{
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+
+  #form-modal-business{
+    display: none;
+  }
+
+  .modal-content-business{
+    position: relative;
+    width: 80%;
+    height:80%;
+    margin: 10vh auto;
+    background: url("../img/bussines_modal.jpg");
+    background-size: cover;
+
+    @media screen and(max-width: 850px){
+      height: 90vh;
+      margin: 5vh auto;
+    }
+    .modal-block-for-text-business{
+      display:inline-block;
+      width: 80%;
+      margin: 10%;
+      padding: 1%;
+      background: rgba(255, 255, 255, 0.66);
+      border-radius: 10px;
+      font-family: $FontSegoe;
+       font-size: 1vw;
+      overflow: hidden;
+      @media screen and(max-width: 850px){
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+        font-size: 1.85vh;
+      }
+
+    }
+    button{
+      position: absolute;
+      bottom: 10px;
+      left: 32%;
+      background: red;
+      border-radius: 10px;
+      height: 7vh;
+      width: 25vw;
+      border: 1px solid red;
+      color:white;
+      font-size: 1.5vw;
+      @media screen and(max-width: 850px){
+        bottom: 10px;
+        left: 25%;
+        height: 10vh;
+        width: 40vw;
+        font-size: 3.5vw;
+      }
+
+    }
+  }
+  form{
+    overflow: hidden;
+    width: 50vw;
+    position: absolute;
+    bottom: 30vh;
+    left:14vw;
+    @media screen and(max-width: 850px){
+      left:5vw;
+      width:70vw;
+    }
+    input{
+      height: 10vh;
+      margin: 6% 0;
+      width: 100%;
+      border: none;
+      text-align: center;
+      font-size: 4.1vh;
+
+    }
+  }
+}
+
+//business
