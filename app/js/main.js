@@ -407,7 +407,9 @@ $('.try_English').on('click', function (event) {
 
 // modal form test
 // open test modal
+    var i =2 ;
 $('#past_the_test').on('click touchend',function () {
+    i=2;
         $('.modal-test-wrapper').css('display', 'flex');
          $('.questions').load('test.html .load-1', function () {
             $('.load p').on('click touchend', function () {
@@ -421,7 +423,7 @@ $('#past_the_test').on('click touchend',function () {
          })
 });
 // open test modal
-    var i =2 ;
+
     $('#next').on('click touchend', function () {
         $('.questions').load('test.html .load-'+i, function () {
             $('.load p').on('click touchend', function () {
