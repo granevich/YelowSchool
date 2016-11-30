@@ -1283,9 +1283,23 @@ div.modal-feedback-wrapper .back-modal-feedback button
 }
 .modal-test-wrapper .modal-test .questions
 {
-    width: 80%; 
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 80%;
     height: 70%;
     margin: auto;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 .modal-test-wrapper .modal-test .questions .load
 {
@@ -1315,9 +1329,16 @@ div.modal-feedback-wrapper .back-modal-feedback button
 .modal-test-wrapper .modal-test .questions .load p
 {
     font-family: 'Segoe UI', sans-serif;
-    font-size: 2.2vw; 
+    font-size: 2.2vw;
+
+    display: block;
 
     cursor: pointer;
+
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
 }
 @media screen and (max-width: 850px)
 {
@@ -1437,6 +1458,67 @@ div.modal-feedback-wrapper .back-modal-feedback button
         font-size: 2.5vw;
         line-height: 1.2;
     }
+}
+
+progress
+{
+    width: 100%;
+}
+
+.modal-test-form
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column;
+
+    width: 60%;
+    height: 95%;
+
+    background: #cfcfcf;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+.modal-test-form .modal-test-form-logo
+{
+    text-align: center;
+}
+.modal-test-form form
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 30vw;
+    height: 15vw;
+
+    -webkit-flex-flow: column;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
+.modal-test-form form input
+{
+    width: 100%;
+    height: 5vw;
+}
+.modal-test-form #test-send-form
+{
+    display: block;
 }
 
 nav.nav-large_screen:hover

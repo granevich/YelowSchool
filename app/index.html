@@ -677,7 +677,7 @@
 <!--MODAL_INPUT-->
 <!--MODAL_TEST-->
 <div class="modal-test-wrapper">
-        <div class="modal-test">
+        <div class="modal-test" style="display: none">
             <div style="display: flex">
                 <div class="modal-logo">
                     <span>yellow school</span><br>
@@ -694,9 +694,23 @@
             </div>
                 <div class="how_it_works">*Choose the best word or phrase to fill each blank.</div>
             <br>
+
             <button id="next" class="disabled" disabled>Далее</button>
+            <span ><span class="quesnum"></span>/60</span>
+            <progress id="progress" value="10" max="100"></progress>
             <img class="close_icon" src="img/close_icon.png" alt="close icon">
         </div>
+    <div class="modal-test-form">
+            <div class="modal-test-form-logo">
+                <span>yellow school</span><br>
+                <span>школа иностранных языков</span>
+            </div>
+        <form action="" name="test-contactform" id="test-form" method="post">
+            <input type="email" >
+            <input type="text">
+        </form>
+        <button id="test-send-form"></button>
+    </div>
 
 </div>
 

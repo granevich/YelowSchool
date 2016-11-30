@@ -408,15 +408,30 @@ $('.try_English').on('click', function (event) {
 // modal form test
 // open test modal
     var i =2 ;
+    var progressval = 0;
+    var numofquest = 0;
+    var ball = 0;
 $('#past_the_test').on('click touchend',function () {
+    ball = 0;
     i=2;
+    progressval =1.6;
+    numofquest = 1;
+    $('progress').val(progressval);
+    $('.quesnum').text(numofquest);
         $('.modal-test-wrapper').css('display', 'flex');
          $('.questions').load('test.html .load-1', function () {
             $('.load p').on('click ', function () {
+
                 for(var i=0;i<$('.load p').length; i++){
                     $('.load p').css('color', 'black');
                     $(this).css('color', '#fc9c00');
-                    $('.replace_empty').html($(this).html()).css('color', '#fc9c00');
+                    if($(this).attr('datatype') === 'true'){
+                        $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'true');
+                    }
+                    else{
+                        $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'false');
+                    }
+
                     $('.modal-test button').removeClass('disabled').removeAttr('disabled')
                 }
             })
@@ -425,17 +440,40 @@ $('#past_the_test').on('click touchend',function () {
 // open test modal
 
     $('#next').on('click ', function () {
-        $('.questions').load('test.html .load-'+i, function () {
-            $('.load p').on('click ', function () {
-                for(var i=0;i<$('.load p').length; i++){
-                    $('.load p').css('color', 'black');
-                    $(this).css('color', '#fc9c00');
-                    $('.replace_empty').html($(this).html()).css('color', '#fc9c00');
-                    $('.modal-test button').removeClass('disabled').removeAttr('disabled')
-                }
-            })
-        });
-   i++;
+        if($('.replace_empty').attr('datatype')==='true'){
+            ball++;
+            console.log(ball);
+        }
+        if(i<=2){
+            $('.modal-test button').addClass('disabled');
+            document.getElementById("next").disabled = true;
+            $('.questions').load('test.html .load-'+i, function () {
+                $('.load p').on('click ', function () {
+                    for(var i=0;i<$('.load p').length; i++){
+                        if($(this).attr('datatype') === 'true'){
+                            $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'true');
+                        }
+                        else{
+                            $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'false');
+                        }
+                        $('.load p').css('color', 'black');
+                        $(this).css('color', '#fc9c00');
+
+                        $('.modal-test button').removeClass('disabled').removeAttr('disabled')
+
+                    }
+                })
+            });
+            progressval=progressval+1.6;
+
+            numofquest++;
+            $('progress').val(progressval);
+            $('.quesnum').text(numofquest);
+            i++;
+        }
+        else{
+            alert('stop')
+        }
 
 });
 
