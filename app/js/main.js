@@ -412,7 +412,7 @@ $('#past_the_test').on('click touchend',function () {
     i=2;
         $('.modal-test-wrapper').css('display', 'flex');
          $('.questions').load('test.html .load-1', function () {
-            $('.load p').on('click touchend', function () {
+            $('.load p').on('click ', function () {
                 for(var i=0;i<$('.load p').length; i++){
                     $('.load p').css('color', 'black');
                     $(this).css('color', '#fc9c00');
@@ -424,9 +424,9 @@ $('#past_the_test').on('click touchend',function () {
 });
 // open test modal
 
-    $('#next').on('click touchend', function () {
+    $('#next').on('click ', function () {
         $('.questions').load('test.html .load-'+i, function () {
-            $('.load p').on('click touchend', function () {
+            $('.load p').on('click ', function () {
                 for(var i=0;i<$('.load p').length; i++){
                     $('.load p').css('color', 'black');
                     $(this).css('color', '#fc9c00');
