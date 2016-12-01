@@ -440,11 +440,14 @@ $('#past_the_test').on('click touchend',function () {
 // open test modal
 
     $('#next').on('click ', function () {
+        $('.questions').text('loading..');
+
+
         if($('.replace_empty').attr('datatype')==='true'){
             ball++;
             console.log(ball);
         }
-        if(i<=2){
+        if(i<=60){
             $('.modal-test button').addClass('disabled');
             document.getElementById("next").disabled = true;
             $('.questions').load('test.html .load-'+i, function () {
