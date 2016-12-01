@@ -406,6 +406,28 @@ $('.try_English').on('click', function (event) {
 
 
 // modal form test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // open test modal
     var i =2 ;
     var progressval = 0;
@@ -419,9 +441,9 @@ $('#past_the_test').on('click touchend',function () {
     $('progress').val(progressval);
     $('.quesnum').text(numofquest);
         $('.modal-test-wrapper').css('display', 'flex');
+
          $('.questions').load('test.html .load-1', function () {
             $('.load p').on('click ', function () {
-
                 for(var i=0;i<$('.load p').length; i++){
                     $('.load p').css('color', 'black');
                     $(this).css('color', '#fc9c00');
@@ -431,30 +453,40 @@ $('#past_the_test').on('click touchend',function () {
                     else{
                         $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'false');
                     }
-
                     $('.modal-test button').removeClass('disabled').removeAttr('disabled')
                 }
             })
          })
 });
 // open test modal
-
     $('#next').on('click ', function () {
+        if($('.replace_empty').attr('datatype')==='true'){
+            ball++;
+            console.log(ball)
+        }
+        else {
+
+            ball =ball;
+            console.log(ball)
+
+        }
         $('.questions').text('loading..');
 
 
-        if($('.replace_empty').attr('datatype')==='true'){
-            ball++;
-            console.log(ball);
-        }
         if(i<=60){
             $('.modal-test button').addClass('disabled');
             document.getElementById("next").disabled = true;
+
             $('.questions').load('test.html .load-'+i, function () {
+
+
                 $('.load p').on('click ', function () {
+
+
                     for(var i=0;i<$('.load p').length; i++){
                         if($(this).attr('datatype') === 'true'){
                             $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'true');
+
                         }
                         else{
                             $('.replace_empty').html($(this).html()).css('color', '#fc9c00').attr('datatype', 'false');
@@ -467,18 +499,24 @@ $('#past_the_test').on('click touchend',function () {
                     }
                 })
             });
-            progressval=progressval+1.6;
 
+            progressval=progressval+1.6;
             numofquest++;
             $('progress').val(progressval);
             $('.quesnum').text(numofquest);
             i++;
         }
         else{
-            alert('stop')
+            $('.modal-test').hide();
+           $('.modal-test-form').css('display', 'flex');
+
         }
 
+        // alert($('.replace_empty').attr('datatype'));
+
 });
+
+
 
 // close button
 $('.close_icon').on('click', function () {
@@ -487,6 +525,62 @@ $('.close_icon').on('click', function () {
 
 
 // close button
+
+// modal form test
+    var mailval;
+    var nameval;
+    $('#test-form-mail').on('blur', function (e) {
+        var regexpmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+         mailval  = $(this).val();
+        if( regexpmail.test(mailval) === true){
+           $('#put_correct').hide();
+            $('#test-send-form').removeAttr('class').removeAttr('disabled')
+       }
+       else{
+            $('#test-send-form').attr('class','disabled').attr('disabled');
+           $('#put_correct').show();
+           $(this).val(' ');
+
+       }
+    });
+     $('#test-form-name').on('keypress', function () {
+         var regexpname = /^[А-Яа-яA-Za-z ,.'-]{3,15}/i;
+          nameval = $(this).val();
+         if(regexpname.test(nameval)===true){
+                $('#test-send-form').removeAttr('class').removeAttr('disabled')
+         }
+         else{
+             console.log('false');
+             $('#test-send-form').attr('class','disabled').attr('disabled');
+         }
+     });
+    $('#test-send-form').on('click', function () {
+        console.log(ball);
+        $('#ball').val(ball);
+        var form = $('#test-form').serialize();
+        console.log(form);
+        $.ajax({
+            type: 'POST',
+            url: 'form.php',
+            dataType: "html",
+            data: form,
+            beforeSend:function () {
+
+                // $('.windows8').show();
+            },
+            success:function () {
+
+
+            }
+
+        })
+            .done(function () {
+                $('.modal-test-wrapper').css('display', 'none');
+            })
+            .error(function () {
+                alert('error')
+            })
+    });
 // modal form test
 
 

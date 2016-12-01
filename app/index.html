@@ -701,7 +701,13 @@
             <progress id="progress" value="10" max="100"></progress>
             <img class="close_icon" src="img/close_icon.png" alt="close icon">
         </div>
-    <div class="modal-test-form" style="display: none">
+
+
+
+
+
+    <div class="modal-test-form" style="display:none">
+        <img class="close_icon" src="img/close_icon.png" alt="close icon">
         <div class="modal-test-logo-wrapper">
             <div class="modal-test-form-logo">
                 <span>yellow school</span><br>
@@ -710,12 +716,14 @@
             <img src="img/logo_bus.png" alt="logo yellow bus">
         </div>
 
-
+       <div class="left-feedback">Оставьте свои контактные данные и мы вышлем вам результат</div>
         <form action="" name="test-contactform" id="test-form" method="post">
-            <input type="email" >
-            <input type="text">
+            <input type="email" id="test-form-mail" name="test-form-mail" placeholder="Ваш Email" autofocus required>
+            <span id="put_correct" style="display: none">Введите правильный EMAIL</span>
+            <input type="text" id='test-form-name' name='test-form-name' placeholder="Имя, Фамилия" required>
+            <input  name='ball' id="ball" type="number" value="0" style="display: none">
         </form>
-        <button id="test-send-form" >Отправить</button>
+        <button id="test-send-form" class="disabled" disabled>Отправить</button>
     </div>
 
 </div>
